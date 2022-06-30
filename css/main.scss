@@ -30,7 +30,7 @@ html {
 }
 
 body {
-  font-family: 'Noto Sans KR', sans-serif ,'Nanum Myeongjo', serif;
+  font-family: 'Noto Sans KR', sans-serif, 'Nanum Myeongjo', serif;
 }
 
 
@@ -85,7 +85,7 @@ body {
       height: 100%;
     }
 
-    li > a {
+    li>a {
       position: relative;
       display: flex;
       height: 100%;
@@ -140,10 +140,10 @@ body {
       display: block;
       width: 100%;
       height: 25%;
-      border-left: 1px solid  rgba(255, 255, 255, 0.5);
-      border-bottom: 1px solid  rgba(255, 255, 255, 0.5);
+      border-left: 1px solid rgba(255, 255, 255, 0.5);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 
-      > a {
+      >a {
         position: relative;
         display: block;
         width: 100%;
@@ -159,11 +159,12 @@ body {
     top: 84px;
     display: block;
     color: #fff;
-    
+
     strong {
       font-size: 37px;
       font-weight: 700;
     }
+
     p {
       font-size: 16px;
       margin-top: 20px;
@@ -186,6 +187,7 @@ body {
     font-size: 22px;
     font-weight: 300;
   }
+
   strong {
     position: relative;
     display: block;
@@ -209,4 +211,170 @@ body {
   background-size: 50px auto;
   background-color: #86786f;
 }
+
+.scroll-stick {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+
+  span {
+    display: inline-block;
+    color: #fff;
+    writing-mode: vertical-rl;
+  }
+
+  .w-bar {
+    position: relative;
+    top: 0;
+    left: 6px;
+    display: block;
+    width: 1px;
+    height: 130px;
+    background-color: #fff;
+    margin-top: 15px;
+  }
+}
+
 /*=== ///first-page ===*/
+
+
+/*=== Pergola set ===*/
+.pergola-set {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 4200px;
+  padding-top: 240px;
+  background-color: rgb(128, 223, 223);
+
+  ul {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    li {
+      position: relative;
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .pla-set-inner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 1600px;
+    height: 100%;
+    background-color: rgb(228, 222, 222);
+    margin: 0 auto;
+
+    span {
+      position: relative;
+      display: block;
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    strong {
+      position: relative;
+      display: block;
+      font-family: 'Nanum Myeongjo', serif;
+      font-size: 62px;
+      margin-top: 60px;
+    }
+
+    p {
+      position: relative;
+      display: block;
+      font-size: 20px;
+      margin: 40px 0 110px;
+    }
+
+    .click-bt {
+      display: inline-block;
+      position: relative;
+      width: 48px;
+      height: 48px;
+
+
+      &::before {
+        display: block;
+        content: '';
+        width: 1px;
+        height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #000;
+      }
+
+      &::after {
+        display: block;
+        content: '';
+        width: 100%;
+        height: 1px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #000;
+      }
+
+
+
+    }
+
+  }
+
+}
+
+
+.pro-main {
+  height: 1056px;
+  background-color: red;
+
+  .pla-set-inner {
+    padding: 0 160px;
+  }
+
+  .pro-imgbox {
+    position: relative;
+    display: block;
+    margin-right: 95px;
+
+    a {
+      position: relative;
+      display: block;
+      width: 662px;
+      height: 826px;
+      background: url('../images/pergola.img-1.jpg') no-repeat center;
+      background-size: cover;
+    }
+  }
+
+  .pro-txtbox {
+    height: 826px;
+
+  }
+}
+
+.air-main {
+  height: 892px;
+  background-color: green;
+}
+
+.sta-main {
+  height: 1056px;
+  background-color: blue;
+}
+
+.orc-main {
+  height: 933px;
+  background-color: brown;
+}
+
+/*=== ///Pergola set ===*/

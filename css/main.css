@@ -177,4 +177,145 @@ body {
   background-color: #86786f;
 }
 
-/*=== ///first-page ===*//*# sourceMappingURL=main.css.map */
+.scroll-stick {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+}
+.scroll-stick span {
+  display: inline-block;
+  color: #fff;
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+}
+.scroll-stick .w-bar {
+  position: relative;
+  top: 0;
+  left: 6px;
+  display: block;
+  width: 1px;
+  height: 130px;
+  background-color: #fff;
+  margin-top: 15px;
+}
+
+/*=== ///first-page ===*/
+/*=== Pergola set ===*/
+.pergola-set {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 4200px;
+  padding-top: 240px;
+  background-color: rgb(128, 223, 223);
+}
+.pergola-set ul {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.pergola-set ul li {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.pergola-set .pla-set-inner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 1600px;
+  height: 100%;
+  background-color: rgb(228, 222, 222);
+  margin: 0 auto;
+}
+.pergola-set .pla-set-inner span {
+  position: relative;
+  display: block;
+  font-size: 18px;
+  font-weight: 500;
+}
+.pergola-set .pla-set-inner strong {
+  position: relative;
+  display: block;
+  font-family: "Nanum Myeongjo", serif;
+  font-size: 62px;
+  margin-top: 60px;
+}
+.pergola-set .pla-set-inner p {
+  position: relative;
+  display: block;
+  font-size: 20px;
+  margin: 40px 0 110px;
+}
+.pergola-set .pla-set-inner .click-bt {
+  display: inline-block;
+  position: relative;
+  width: 48px;
+  height: 48px;
+}
+.pergola-set .pla-set-inner .click-bt::before {
+  display: block;
+  content: "";
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #000;
+}
+.pergola-set .pla-set-inner .click-bt::after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #000;
+}
+
+.pro-main {
+  height: 1056px;
+  background-color: red;
+}
+.pro-main .pla-set-inner {
+  padding: 0 160px;
+}
+.pro-main .pro-imgbox {
+  position: relative;
+  display: block;
+  margin-right: 95px;
+}
+.pro-main .pro-imgbox a {
+  position: relative;
+  display: block;
+  width: 662px;
+  height: 826px;
+  background: url("../images/pergola.img-1.jpg") no-repeat center;
+  background-size: cover;
+}
+.pro-main .pro-txtbox {
+  height: 826px;
+}
+
+.air-main {
+  height: 892px;
+  background-color: green;
+}
+
+.sta-main {
+  height: 1056px;
+  background-color: blue;
+}
+
+.orc-main {
+  height: 933px;
+  background-color: brown;
+}
+
+/*=== ///Pergola set ===*//*# sourceMappingURL=main.css.map */
