@@ -31,6 +31,7 @@ html {
 
 body {
   font-family: 'Noto Sans KR', sans-serif, 'Nanum Myeongjo', serif;
+  line-height: 1.4;
 }
 
 
@@ -237,7 +238,9 @@ body {
   }
 }
 
-/*=== ///first-page ===*/
+/*=== /// first-page ===*/
+
+
 
 
 /*=== Pergola set ===*/
@@ -245,8 +248,8 @@ body {
   position: relative;
   display: block;
   width: 100%;
-  height: 4200px;
-  padding-top: 240px;
+  height: 100%;
+  padding: 240px 0;
   background-color: rgb(128, 223, 223);
 
   ul {
@@ -267,9 +270,9 @@ body {
     display: flex;
     justify-content: center;
     width: 1600px;
-    height: 100%;
     background-color: rgb(228, 222, 222);
     margin: 0 auto;
+
 
     span {
       position: relative;
@@ -284,6 +287,7 @@ body {
       font-family: 'Nanum Myeongjo', serif;
       font-size: 62px;
       margin-top: 60px;
+      font-weight: bold;
     }
 
     p {
@@ -334,11 +338,14 @@ body {
 
 
 .pro-main {
-  height: 1056px;
+  height: 100%;
   background-color: red;
 
   .pla-set-inner {
     padding: 0 160px;
+    margin-bottom: 230px;
+
+
   }
 
   .pro-imgbox {
@@ -357,24 +364,479 @@ body {
   }
 
   .pro-txtbox {
-    height: 826px;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 
 .air-main {
-  height: 892px;
+  height: 100%;
   background-color: green;
+
+  .pla-set-inner {
+    margin-bottom: 230px;
+    padding-right: 160px;
+    justify-content: space-between;
+  }
+
+  .air-imgbox {
+    position: relative;
+    display: block;
+    margin-left: 95px;
+
+    a {
+      position: relative;
+      display: block;
+      width: 826px;
+      height: 662px;
+      background: url('../images/pergola.img-2.jpg') no-repeat center;
+      background-size: cover;
+    }
+  }
+
+  .air-txtbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 .sta-main {
-  height: 1056px;
+  height: 100%;
   background-color: blue;
+
+  .pla-set-inner {
+    padding-right: 160px;
+    margin-bottom: 230px;
+    justify-content: flex-end;
+  }
+
+  .sta-imgbox {
+    position: relative;
+    display: block;
+    margin-right: 95px;
+
+    a {
+      position: relative;
+      display: block;
+      width: 662px;
+      height: 826px;
+      background: url('../images/pergola.img-3.jpg') no-repeat center;
+      background-size: cover;
+    }
+  }
+
+  .sta-txtbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 .orc-main {
-  height: 933px;
+  height: 100%;
   background-color: brown;
+
+  .pla-set-inner {
+    justify-content: space-between;
+  }
+
+  .orc-imgbox {
+    position: relative;
+    display: block;
+    margin-left: 95px;
+
+    a {
+      position: relative;
+      display: block;
+      width: 1100px;
+      height: 693px;
+      background: url('../images/pergola.img-4.jpg') no-repeat center;
+      background-size: cover;
+    }
+  }
+
+  .orc-txtbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
-/*=== ///Pergola set ===*/
+/*=== /// Pergola set ===*/
+
+
+
+
+/*=== Parasol set ===*/
+.parasol-set {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 1420px;
+  background-color: #f6f6f6;
+  padding: 240px 0;
+
+}
+
+.sol-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 805px;
+}
+
+.slidepart {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #c0cce4;
+
+  h3 {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 60px;
+    font-weight: 400;
+    text-align: center;
+  }
+}
+
+/*=== ///Parasol set ===*/
+
+
+
+
+/*===  Shade & Roofniture ===*/
+.s-and-r {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 910px;
+  background-color: rgb(49, 0, 0);
+
+  .s-and-r-bg {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background: url('../images/shade.jpg') no-repeat center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.1);
+
+    &::before {
+      content: "";
+      opacity: 0.4;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      background-color: rgb(37, 37, 83);
+
+    }
+
+
+    li {
+      position: relative;
+      display: block;
+      width: 50%;
+      height: 100%;
+
+      &:first-child {
+        border-right: 1px solid rgba(255, 255, 255, 0.5);
+      }
+
+      a {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        text-align: center;
+        // transition: all 2s;
+
+        &:hover span {
+          border-color: #1D2C4A;
+          background-color: #1D2C4A;
+        }
+
+        strong {
+          font-size: 63px;
+          font-family: 'Nanum Myeongjo', serif;
+          font-weight: bold;
+        }
+
+        p {
+          font-size: 18px;
+          line-height: 1.7;
+          margin-top: 23px;
+        }
+
+        span {
+          position: relative;
+          display: inline-block;
+          font-size: 17px;
+          font-weight: 300;
+          border: 1px solid #fff;
+          padding: 15px 47px;
+          margin-top: 100px;
+        }
+      }
+    }
+  }
+}
+
+/*===  /// Shade & Roofniture ===*/
+
+
+
+/*===  Project ===*/
+.project {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 2410px;
+  background-color: rgb(117, 126, 123);
+  padding: 240px 0;
+}
+
+.pro-bgtxt {
+  position: absolute;
+  top: 0;
+  right: 15px;
+  display: block;
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 172px;
+  color: #f3f4f6;
+  font-weight: 500;
+  line-height: 1.05;
+}
+
+.pro-inner {
+  position: relative;
+  display: block;
+  width: 1600px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+
+  h3 {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 60px;
+    font-weight: 400;
+  }
+
+  p {
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: 22px;
+  }
+}
+
+.pro-imgpart {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin-top: 130px;
+  background-color: rgba(0, 0, 255, 0.1);
+}
+
+.pro-imgbox {
+  position: relative;
+  display: block;
+  width: 50%;
+  height: 100%;
+  background-color: #c0cce4;
+}
+
+/*===  /// Project ===*/
+
+
+
+
+/*===  Contact us ===*/
+.contact-us {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 680px;
+  background: url('../images/contact.jpg') no-repeat center;
+  background-size: cover;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: #1d2c4a;
+    opacity: 0.5;
+  }
+}
+
+
+.con-us-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 1600px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7);
+
+  .con-us-txtbox {
+    position: relative;
+    display: block;
+
+    h3 {
+      font-family: 'Nanum Myeongjo', serif;
+      font-size: 60px;
+      font-weight: 400;
+    }
+
+    p {
+      font-size: 18px;
+      font-weight: 300;
+      margin-top: 22px;
+    }
+  }
+
+  a {
+    position: relative;
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+    margin-top: 90px;
+    padding-bottom: 7px;
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background: #fff;
+    }
+  }
+}
+
+/*===  /// Contact us ===*/
+
+
+/*===  footer ===*/
+.footer {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 471px;
+  background-color: #242424;
+  padding: 65px;
+  color: #7e7e7e;
+}
+
+.footer-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 1600px;
+  text-align: center;
+
+  strong {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  b {
+    display: block;
+    font-size: 37px;
+    margin: 3px 0 20px;
+    line-height: 1;
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 15px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+
+  }
+
+  a {
+    display: inline-block;
+    width: 133px;
+    height: 39px;
+    background: url('../images/logo.svg') no-repeat center;
+    background-size: contain;
+    opacity: 0.4;
+    margin-top: 50px;
+  }
+
+  h6 {
+    margin-top: 18px;
+    font-size: 16px;
+  }
+
+  span {
+    font-size: 15px;
+    color: #fff;
+  }
+
+}
+
+.sns-link {
+  position: absolute;
+  top: 65px;
+  right: 160px;
+  display: flex;
+  align-items: center;
+
+
+
+  a {
+    position: relative;
+    display: block;
+    width: 27px;
+    height: 27px;
+    opacity: 0.4;
+    margin-right: 26px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .blog {
+    background: url('../images/icon-blog-wh.svg') no-repeat center;
+    background-size: contain;
+  }
+
+  .facebook {
+    background: url('../images/icon-facebook.svg') no-repeat center;
+    background-size: contain;
+  }
+
+  .youtube {
+    background: url('../images/icon-youtube.svg') no-repeat center;
+    background-size: contain;
+  }
+
+  .instargram {
+    background: url('../images/icon-insta.svg') no-repeat center;
+    background-size: contain;
+  }
+}
+
+/*===  /// footer ===*/
