@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
 * {
   margin: 0;
@@ -62,13 +63,37 @@ body {
   align-items: center;
   height: 100%;
   font-size: 20px;
+  border-bottom: 1px solid red;
 }
-.header .main-gnb li {
+.header .main-gnb::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 400px;
+  background-color: rgba(255, 255, 255, 0);
+  z-index: -1;
+}
+.header .main-gnb > li {
   position: relative;
   display: block;
   height: 100%;
+  text-align: center;
+  border-bottom: 1px solid transparent;
 }
-.header .main-gnb li > a {
+.header .main-gnb > li:hover {
+  border-bottom: 2px solid #1f2c4b;
+  background-color: #fff;
+}
+.header .main-gnb > li:hover > a {
+  color: #1f2c4b;
+}
+.header .main-gnb > li:hover .subgnb {
+  visibility: visible;
+}
+.header .main-gnb > li > a {
   position: relative;
   display: flex;
   height: 100%;
@@ -90,10 +115,36 @@ body {
   font-size: 18px;
   color: #fff;
   line-height: 1.4;
+  transition: all 0.5s;
 }
 .header .application-bt:hover {
   background-color: #fff;
+  box-shadow: 5px 5px 30px #1d2c4a;
   color: #1d2c4a;
+}
+
+.subgnb {
+  position: relative;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding-top: 10px;
+  visibility: hidden;
+}
+.subgnb > li {
+  position: relative;
+  display: block;
+  border-bottom: 1px solid transparent;
+}
+.subgnb > li > a {
+  position: relative;
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  padding: 10px 0;
+  color: #1d2c4a;
+}
+.subgnb > li > a:hover span {
+  border-bottom: 1px solid #1f2c4b;
 }
 
 .f-r-menu {
@@ -103,7 +154,6 @@ body {
   display: block;
   width: 22vw;
   height: 100%;
-  background-color: gray;
 }
 .f-r-menu .r-menuin {
   position: relative;
@@ -120,24 +170,57 @@ body {
   border-left: 1px solid rgba(255, 255, 255, 0.5);
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
-.f-r-menu .r-menuin li > a {
+.f-r-menu .r-menuin li a {
   position: relative;
   display: block;
   width: 100%;
   height: 100%;
   padding-left: 70px;
+  transition: all 0.5s;
 }
-.f-r-menu .r-main-txt {
+.f-r-menu .r-menuin li a:hover {
+  background-color: rgba(10, 10, 85, 0.4);
+}
+.f-r-menu .r-menuin li a:hover span {
+  opacity: 1;
+}
+.f-r-menu .r-menuin li a:hover .r-main-txt {
+  top: 65px;
+}
+.f-r-menu .r-menuin li span {
+  position: absolute;
+  left: 70px;
+  bottom: 50px;
+  font-size: 15px;
+  font-weight: 300;
+  color: #fff;
+  line-height: 1;
+  opacity: 0;
+  transition: all 0.7s;
+}
+.f-r-menu .r-menuin li span::after {
+  content: "";
+  position: relative;
+  display: inline-block;
+  width: 56px;
+  height: 12px;
+  background: url("../images/arrow.png") no-repeat center;
+  background-size: cover;
+  margin-left: 60px;
+}
+
+.r-main-txt {
   position: absolute;
   top: 84px;
   display: block;
   color: #fff;
+  transition: all 0.5s;
 }
-.f-r-menu .r-main-txt strong {
+.r-main-txt strong {
   font-size: 37px;
   font-weight: 700;
 }
-.f-r-menu .r-main-txt p {
+.r-main-txt p {
   font-size: 16px;
   margin-top: 20px;
 }
@@ -147,7 +230,7 @@ body {
   display: block;
   width: 1600px;
   margin: 0 auto;
-  background-color: beige;
+  background-color: rgba(170, 21, 21, 0.1);
   color: #fff;
   margin-top: 210px;
 }
@@ -170,12 +253,19 @@ body {
   position: absolute;
   bottom: 0;
   left: 52px;
-  display: block;
+  display: inline-block;
   width: 100px;
   height: 100px;
   background: url("../images/icon-kakaotalk.svg") no-repeat center;
   background-size: 50px auto;
   background-color: #86786f;
+  transition: all 0.3s;
+}
+.kakao-bt:hover {
+  box-shadow: 5px 5px 30px #1d2c4a;
+  background: url("../images/icon-kakaotalk-png변환버전그레이.png") no-repeat center;
+  background-size: 50px auto;
+  background-color: #fff;
 }
 
 .scroll-stick {

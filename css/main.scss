@@ -79,22 +79,52 @@ body {
     align-items: center;
     height: 100%;
     font-size: 20px;
+    border-bottom: 1px solid red;
 
-    li {
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 400px;
+      background-color: rgba(255, 255, 255, 0);
+      z-index: -1;
+    }
+
+    > li {
       position: relative;
       display: block;
       height: 100%;
+      text-align: center;
+      border-bottom: 1px solid transparent;
+
+      &:hover {
+        border-bottom: 2px solid #1f2c4b;
+        background-color: #fff;
+      }
+      &:hover > a {
+        color: #1f2c4b;
+      }
+      &:hover .subgnb {
+        visibility: visible;
+      }
+
+      > a {
+        position: relative;
+        display: flex;
+        height: 100%;
+        padding: 0 60px;
+        color: #fff;
+        opacity: 0.7;
+        align-items: center;
+
+        
+      }
+
     }
 
-    li>a {
-      position: relative;
-      display: flex;
-      height: 100%;
-      padding: 0 60px;
-      color: #fff;
-      opacity: 0.7;
-      align-items: center;
-    }
   }
 
   .application-bt {
@@ -110,14 +140,43 @@ body {
     font-size: 18px;
     color: #fff;
     line-height: 1.4;
+    transition: all 0.5s;
 
     &:hover {
       background-color: #fff;
+      box-shadow: 5px 5px 30px #1d2c4a;
       color: #1d2c4a;
     }
   }
 
 
+}
+
+.subgnb {
+  position: relative;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding-top: 10px;
+  visibility: hidden;
+
+  > li {
+    position: relative;
+    display: block;
+    border-bottom: 1px solid transparent;
+
+    > a {
+      position: relative;
+      display: block;
+      width: 100%;
+      font-size: 16px;
+      padding: 10px 0;
+      color: #1d2c4a;
+
+      &:hover span {
+        border-bottom: 1px solid #1f2c4b;
+      }
+    }
+  }
 }
 
 .f-r-menu {
@@ -127,7 +186,6 @@ body {
   display: block;
   width: 22vw;
   height: 100%;
-  background-color: gray;
 
   .r-menuin {
     position: relative;
@@ -144,41 +202,79 @@ body {
       border-left: 1px solid rgba(255, 255, 255, 0.5);
       border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 
-      >a {
+
+      a {
         position: relative;
         display: block;
         width: 100%;
         height: 100%;
         padding-left: 70px;
+        transition: all 0.5s;
 
+        &:hover {
+          background-color: rgba(10, 10, 85, 0.4);
+        }
+        &:hover span {
+          opacity: 1;
+        }
+
+        &:hover .r-main-txt {
+          top: 65px;
+        }
       }
-    }
-  }
 
-  .r-main-txt {
-    position: absolute;
-    top: 84px;
-    display: block;
-    color: #fff;
+      span {
+        position: absolute;
+        left: 70px;
+        bottom: 50px;
+        font-size: 15px;
+        font-weight: 300;
+        color: #fff;
+        line-height: 1;
+        opacity: 0;
+        transition: all 0.7s;
 
-    strong {
-      font-size: 37px;
-      font-weight: 700;
-    }
+        &::after {
+          content: '';
+          position: relative;
+          display: inline-block;
+          width: 56px;
+          height: 12px;
+          background: url('../images/arrow.png') no-repeat center;
+          background-size: cover;
+          margin-left: 60px;
+        }
+      }
 
-    p {
-      font-size: 16px;
-      margin-top: 20px;
     }
   }
 }
+
+.r-main-txt {
+  position: absolute;
+  top: 84px;
+  display: block;
+  color: #fff;
+  transition: all 0.5s;
+
+  strong {
+    font-size: 37px;
+    font-weight: 700;
+  }
+
+  p {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+}
+
 
 .f-main-txtbox {
   position: relative;
   display: block;
   width: 1600px;
   margin: 0 auto;
-  background-color: beige;
+  background-color: rgba(170, 21, 21, 0.1);
   color: #fff;
   margin-top: 210px;
 
@@ -205,12 +301,21 @@ body {
   position: absolute;
   bottom: 0;
   left: 52px;
-  display: block;
+  display: inline-block;
   width: 100px;
   height: 100px;
   background: url('../images/icon-kakaotalk.svg') no-repeat center;
   background-size: 50px auto;
   background-color: #86786f;
+  transition: all 0.3s;
+
+
+  &:hover {
+    box-shadow: 5px 5px 30px #1d2c4a;
+    background: url('../images/icon-kakaotalk-png변환버전그레이.png') no-repeat center;
+    background-size: 50px auto;
+    background-color: #fff;
+  }
 }
 
 .scroll-stick {
