@@ -306,6 +306,11 @@ body {
     display: block;
     font-size: 22px;
     font-weight: 300;
+
+    // ani
+    animation-name: f-main-txtbox-p;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
   }
 
   strong {
@@ -315,6 +320,12 @@ body {
     font-size: 85px;
     font-weight: 700;
     margin-top: 25px;
+
+    // ani
+    animation-name: f-main-txtbox-strong;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
   }
 
   .palystop-bt {
@@ -327,6 +338,29 @@ body {
   }
 }
 
+@keyframes f-main-txtbox-p {
+  0% {
+    top: 150px;
+    opacity: 0;
+  }
+
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes f-main-txtbox-strong {
+  0% {
+    top: 150px;
+    opacity: 0;
+  }
+
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
 
 
 .kakao-bt {
@@ -366,12 +400,49 @@ body {
   .w-bar {
     position: relative;
     top: 0;
-    left: 6px;
+    left: 8px;
     display: block;
     width: 1px;
     height: 130px;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.5);
     margin-top: 15px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 1px;
+      height: 0px;
+      background-color: rgba(255, 255, 255, 1);
+
+      /* 애니메이션 */
+      animation-name: st;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-delay: 1s;
+      animation-timing-function: ease-out;
+    }
+
+    @keyframes st {
+      0% {
+        top: 0px;
+        left: 0;
+      }
+
+      50% {
+        top: 0px;
+        left: 0;
+        height: 130px;
+      }
+
+      100% {
+        top: 130px;
+        left: 0;
+        height: 0px;
+      }
+    }
   }
 }
 
@@ -387,7 +458,7 @@ body {
   width: 100%;
   height: 100%;
   padding: 240px 0;
-  background-color: rgb(128, 223, 223);
+  // background-color: rgb(128, 223, 223);
 
   ul {
     position: relative;
@@ -407,7 +478,7 @@ body {
     display: flex;
     justify-content: center;
     width: 1600px;
-    background-color: rgb(228, 222, 222);
+    // background-color: rgb(228, 222, 222);
     margin: 0 auto;
 
 
@@ -482,11 +553,12 @@ body {
 
 .pro-main {
   height: 100%;
-  background-color: red;
+  // background-color: red;
 
   .pla-set-inner {
     padding: 0 160px;
     margin-bottom: 230px;
+
 
 
   }
@@ -503,15 +575,53 @@ body {
       height: 826px;
       background: url('../images/pergola.img-1.jpg') no-repeat center;
       background-size: cover;
+
+      // ani 
+      animation-name: pro-img;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
     }
   }
 
   .pro-txtbox {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    // ani 
+    animation-name: pro-txt;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
   }
 }
+
+@keyframes pro-img {
+  0% {
+    border-radius: 50%;
+    top: 220px;
+    opacity: 0;
+  }
+
+  100% {
+    border-radius: 0;
+    top: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes pro-txt {
+  0% {
+    top: 220px;
+    opacity: 0;
+  }
+
+  100% {
+    top: 0px;
+    opacity: 1;
+  }
+}
+
 
 .air-main {
   height: 100%;
@@ -747,7 +857,7 @@ body {
   padding: 240px 0;
 }
 
-.pro-bgtxt {
+.project-bgtxt {
   position: absolute;
   top: 0;
   right: 15px;
@@ -759,12 +869,12 @@ body {
   line-height: 1.05;
 }
 
-.pro-inner {
+.project-inner {
   position: relative;
   display: block;
   width: 1600px;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.1);
+  // background-color: rgba(0, 0, 0, 0.1);
   margin: 0 auto;
 
   h3 {
@@ -780,21 +890,192 @@ body {
   }
 }
 
-.pro-imgpart {
+.project-imgpart {
   position: relative;
   display: flex;
   width: 100%;
   height: 100%;
   margin-top: 130px;
-  background-color: rgba(0, 0, 255, 0.1);
+  // background-color: rgba(0, 0, 255, 0.1);
 }
 
-.pro-imgbox {
+.project-imgbox {
   position: relative;
   display: block;
   width: 50%;
   height: 100%;
-  background-color: #c0cce4;
+  // background-color: #c0cce4;
+}
+
+.project-itembox {
+  position: relative;
+  display: block;
+  box-shadow: 14px 40px 68px 18px rgb(25 32 66 / 30%);
+}
+
+.project-txt {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: #86786f;
+  color: #fff;
+  padding: 65px;
+
+  // ani
+  animation-name: project-txt;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+
+
+  h5 {
+    font-size: 17px;
+    display: block;
+  }
+
+  strong {
+    display: block;
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 60px;
+    font-weight: 400;
+    margin-top: 70px;
+  }
+
+  p {
+    display: block;
+    font-size: 25px;
+    margin-top: 23px;
+  }
+
+}
+
+@keyframes project-txt {
+  0% {
+    top: 50%;
+    opacity: 0;
+  }
+
+  100% {
+    top: 0;
+    opacity: 0.8;
+  }
+}
+
+
+.more-view-bt {
+  position: relative;
+  display: inline-block;
+  font-size: 18px;
+  padding-top: 100px;
+  padding-bottom: 7px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    margin-top: 6px;
+    display: block;
+    width: 90px;
+    height: 2px;
+    background-color: #fff;
+
+    // ani
+    animation-name: more-view-bt;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+
+
+    @keyframes more-view-bt {
+      0% {
+        width: 0;
+      }
+
+      100% {
+        width: 90px;
+      }
+    }
+
+
+
+  }
+}
+
+.project-itembox-1 {
+  left: -34px;
+  width: 814px;
+  height: 472px;
+  margin-bottom: 200px;
+
+  .project-img1 {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url('../images/project-1.jpg') no-repeat center;
+    background-size: cover;
+  }
+
+  .project-txt-1 {
+    text-align: right;
+
+    span {
+
+      &::after {
+        right: 0;
+      }
+    }
+  }
+}
+
+.project-itembox-3 {
+  left: 80px;
+  width: 560px;
+  height: 745px;
+
+  .project-img3 {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url('../images/project-3.jpg') no-repeat center;
+    background-size: cover;
+  }
+
+}
+
+.project-itembox-2 {
+  left: 180px;
+  width: 583px;
+  height: 740px;
+  margin-top: 300px;
+
+  .project-img2 {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url('../images/project-2.jpg') no-repeat center;
+    background-size: cover;
+  }
+}
+
+.project-itembox-4 {
+  left: 40px;
+  width: 774px;
+  height: 433px;
+  margin-top: 200px;
+
+  .project-img4 {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url('../images/project-4.jpg') no-repeat center;
+    background-size: cover;
+  }
 }
 
 /*===  /// Project ===*/
