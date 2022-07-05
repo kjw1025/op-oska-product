@@ -1,4 +1,20 @@
-$(document).ready(function () {});
+$(document).ready(function () {
+
+  // 위로가기 기능
+  let goTop = $('.gotop');
+  goTop.click(function(){
+    $('html').animate({scrollTop:0}, 1500);
+  });
+
+
+
+
+});
+
+
+
+
+
 
 window.onload = function () {
 

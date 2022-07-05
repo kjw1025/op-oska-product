@@ -911,6 +911,7 @@ body {
   position: relative;
   display: block;
   box-shadow: 14px 40px 68px 18px rgb(25 32 66 / 30%);
+  overflow: hidden;
 }
 
 .project-txt {
@@ -1226,6 +1227,7 @@ body {
   right: 160px;
   display: flex;
   align-items: center;
+  z-index: 999999;
 
 
 
@@ -1236,15 +1238,21 @@ body {
     height: 27px;
     opacity: 0.4;
     margin-right: 26px;
+    transition: all 0.5s;
 
     &:last-child {
       margin-right: 0;
+    }
+
+    &:hover {
+      opacity: 1;
     }
   }
 
   .blog {
     background: url('../images/icon-blog-wh.svg') no-repeat center;
     background-size: contain;
+
   }
 
   .facebook {
@@ -1263,4 +1271,24 @@ body {
   }
 }
 
+.gotop {
+  position: fixed;
+  bottom: 50px;
+  right: 30px;
+  display: block;
+  width: 70px;
+  height: 70px;
+  background-color: #1d2c4a;
+  z-index: 99999;
+
+  span {
+    color: #fff;
+  }
+
+
+  // &:hover>i {
+  //   transform: translate(25px, 10px);
+  // }
+
+  }
 /*===  /// footer ===*/
