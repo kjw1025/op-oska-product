@@ -332,10 +332,6 @@ body {
     font-size: 22px;
     font-weight: 300;
 
-    // ani
-    animation-name: f-main-txtbox-p;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
   }
 
   strong {
@@ -346,11 +342,6 @@ body {
     font-weight: 700;
     margin-top: 25px;
 
-    // ani
-    animation-name: f-main-txtbox-strong;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-delay: 1s;
   }
 
   .palystop-bt {
@@ -363,29 +354,6 @@ body {
   }
 }
 
-@keyframes f-main-txtbox-p {
-  0% {
-    top: 150px;
-    opacity: 0;
-  }
-
-  100% {
-    top: 0;
-    opacity: 1;
-  }
-}
-
-@keyframes f-main-txtbox-strong {
-  0% {
-    top: 150px;
-    opacity: 0;
-  }
-
-  100% {
-    top: 0;
-    opacity: 1;
-  }
-}
 
 
 .kakao-bt {
@@ -442,32 +410,9 @@ body {
       height: 0px;
       background-color: rgba(255, 255, 255, 1);
 
-      /* 애니메이션 */
-      animation-name: st;
-      animation-duration: 3s;
-      animation-iteration-count: infinite;
-      animation-delay: 1s;
-      animation-timing-function: ease-out;
+
     }
 
-    @keyframes st {
-      0% {
-        top: 0px;
-        left: 0;
-      }
-
-      50% {
-        top: 0px;
-        left: 0;
-        height: 130px;
-      }
-
-      100% {
-        top: 130px;
-        left: 0;
-        height: 0px;
-      }
-    }
   }
 }
 
@@ -612,10 +557,7 @@ body {
       background: url('../images/pergola.img-1.jpg') no-repeat center;
       background-size: cover;
 
-      // ani 
-      animation-name: pro-img;
-      animation-duration: 2s;
-      animation-iteration-count: infinite;
+
     }
   }
 
@@ -625,38 +567,10 @@ body {
     flex-direction: column;
     justify-content: center;
 
-    // ani 
-    animation-name: pro-txt;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
+
   }
 }
 
-@keyframes pro-img {
-  0% {
-    border-radius: 50%;
-    top: 220px;
-    opacity: 0;
-  }
-
-  100% {
-    border-radius: 0;
-    top: 0px;
-    opacity: 1;
-  }
-}
-
-@keyframes pro-txt {
-  0% {
-    top: 220px;
-    opacity: 0;
-  }
-
-  100% {
-    top: 0px;
-    opacity: 1;
-  }
-}
 
 
 .air-main {
@@ -948,11 +862,18 @@ body {
   display: block;
   box-shadow: 14px 40px 68px 18px rgb(25 32 66 / 30%);
   overflow: hidden;
+
+  &:hover {
+    .project-txt {
+      opacity: 1;
+      top: 0;
+    }
+  }
 }
 
 .project-txt {
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 0;
   display: flex;
   flex-direction: column;
@@ -962,11 +883,10 @@ body {
   background-color: #86786f;
   color: #fff;
   padding: 65px;
+  opacity: 0;
+  transition: all 1.5s;
 
-  // ani
-  animation-name: project-txt;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
+
 
 
   h5 {
@@ -990,24 +910,12 @@ body {
 
 }
 
-@keyframes project-txt {
-  0% {
-    top: 50%;
-    opacity: 0;
-  }
-
-  100% {
-    top: 0;
-    opacity: 0.8;
-  }
-}
-
 
 .more-view-bt {
   position: relative;
   display: inline-block;
   font-size: 18px;
-  padding-top: 100px;
+  margin-top: 100px;
   padding-bottom: 7px;
 
   &::after {
@@ -1018,25 +926,15 @@ body {
     width: 90px;
     height: 2px;
     background-color: #fff;
+    transition: all 0.5s;
+  }
 
-    // ani
-    animation-name: more-view-bt;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-
-
-    @keyframes more-view-bt {
-      0% {
-        width: 0;
-      }
-
-      100% {
-        width: 90px;
-      }
+  &:hover {
+    &::after {
+      animation-name: roadbar;
+      animation-duration: 1s;
+      animation-iteration-count: 1;
     }
-
-
-
   }
 }
 
@@ -1333,3 +1231,76 @@ body {
 }
 
 /*===  /// footer ===*/
+
+
+
+// 애니메이션
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeup-1 {
+  animation-name: fadeup-1;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes fadeup-1 {
+  0% {
+    opacity: 0;
+    top: 150px;
+  }
+  100% {
+    opacity: 1;
+    top: 0px;
+  }
+}
+
+.fadeup-2 {
+  animation-name: fadeup-2;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes fadeup-2 {
+  0% {
+    opacity: 0;
+    top: 300px;
+  }
+  100% {
+    opacity: 1;
+    top: 0px;
+  }
+}
+
+.radius-effect {
+  animation-name: radius-effect;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes radius-effect {
+  0% {
+    border-radius: 200px;
+  }
+  100% {
+    border-radius: 0;
+  }
+}
+
+@keyframes roadbar {
+  0%{
+    width: 0;
+  }
+  100% {
+    width: 90px;
+  }
+}

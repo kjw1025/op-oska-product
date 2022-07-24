@@ -277,12 +277,6 @@ body {
   display: block;
   font-size: 22px;
   font-weight: 300;
-  -webkit-animation-name: f-main-txtbox-p;
-          animation-name: f-main-txtbox-p;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
 }
 .f-main-txtbox strong {
   position: relative;
@@ -291,14 +285,6 @@ body {
   font-size: 85px;
   font-weight: 700;
   margin-top: 25px;
-  -webkit-animation-name: f-main-txtbox-strong;
-          animation-name: f-main-txtbox-strong;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
 }
 .f-main-txtbox .palystop-bt {
   position: relative;
@@ -309,47 +295,6 @@ body {
   margin-top: 110px;
 }
 
-@-webkit-keyframes f-main-txtbox-p {
-  0% {
-    top: 150px;
-    opacity: 0;
-  }
-  100% {
-    top: 0;
-    opacity: 1;
-  }
-}
-
-@keyframes f-main-txtbox-p {
-  0% {
-    top: 150px;
-    opacity: 0;
-  }
-  100% {
-    top: 0;
-    opacity: 1;
-  }
-}
-@-webkit-keyframes f-main-txtbox-strong {
-  0% {
-    top: 150px;
-    opacity: 0;
-  }
-  100% {
-    top: 0;
-    opacity: 1;
-  }
-}
-@keyframes f-main-txtbox-strong {
-  0% {
-    top: 150px;
-    opacity: 0;
-  }
-  100% {
-    top: 0;
-    opacity: 1;
-  }
-}
 .kakao-bt {
   position: absolute;
   bottom: 0;
@@ -401,49 +346,6 @@ body {
   width: 1px;
   height: 0px;
   background-color: rgb(255, 255, 255);
-  /* 애니메이션 */
-  -webkit-animation-name: st;
-          animation-name: st;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
-}
-@-webkit-keyframes st {
-  0% {
-    top: 0px;
-    left: 0;
-  }
-  50% {
-    top: 0px;
-    left: 0;
-    height: 130px;
-  }
-  100% {
-    top: 130px;
-    left: 0;
-    height: 0px;
-  }
-}
-@keyframes st {
-  0% {
-    top: 0px;
-    left: 0;
-  }
-  50% {
-    top: 0px;
-    left: 0;
-    height: 130px;
-  }
-  100% {
-    top: 130px;
-    left: 0;
-    height: 0px;
-  }
 }
 
 /*=== /// first-page ===*/
@@ -556,71 +458,14 @@ body {
   height: 826px;
   background: url("../images/pergola.img-1.jpg") no-repeat center;
   background-size: cover;
-  -webkit-animation-name: pro-img;
-          animation-name: pro-img;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
 }
 .pro-main .pro-txtbox {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  -webkit-animation-name: pro-txt;
-          animation-name: pro-txt;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
 }
 
-@-webkit-keyframes pro-img {
-  0% {
-    border-radius: 50%;
-    top: 220px;
-    opacity: 0;
-  }
-  100% {
-    border-radius: 0;
-    top: 0px;
-    opacity: 1;
-  }
-}
-
-@keyframes pro-img {
-  0% {
-    border-radius: 50%;
-    top: 220px;
-    opacity: 0;
-  }
-  100% {
-    border-radius: 0;
-    top: 0px;
-    opacity: 1;
-  }
-}
-@-webkit-keyframes pro-txt {
-  0% {
-    top: 220px;
-    opacity: 0;
-  }
-  100% {
-    top: 0px;
-    opacity: 1;
-  }
-}
-@keyframes pro-txt {
-  0% {
-    top: 220px;
-    opacity: 0;
-  }
-  100% {
-    top: 0px;
-    opacity: 1;
-  }
-}
 .air-main {
   height: 100%;
   background-color: green;
@@ -869,10 +714,14 @@ body {
   box-shadow: 14px 40px 68px 18px rgba(25, 32, 66, 0.3);
   overflow: hidden;
 }
+.project-itembox:hover .project-txt {
+  opacity: 1;
+  top: 0;
+}
 
 .project-txt {
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 0;
   display: flex;
   flex-direction: column;
@@ -882,12 +731,8 @@ body {
   background-color: #86786f;
   color: #fff;
   padding: 65px;
-  -webkit-animation-name: project-txt;
-          animation-name: project-txt;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  opacity: 0;
+  transition: all 1.5s;
 }
 .project-txt h5 {
   font-size: 17px;
@@ -906,32 +751,11 @@ body {
   margin-top: 23px;
 }
 
-@-webkit-keyframes project-txt {
-  0% {
-    top: 50%;
-    opacity: 0;
-  }
-  100% {
-    top: 0;
-    opacity: 0.8;
-  }
-}
-
-@keyframes project-txt {
-  0% {
-    top: 50%;
-    opacity: 0;
-  }
-  100% {
-    top: 0;
-    opacity: 0.8;
-  }
-}
 .more-view-bt {
   position: relative;
   display: inline-block;
   font-size: 18px;
-  padding-top: 100px;
+  margin-top: 100px;
   padding-bottom: 7px;
 }
 .more-view-bt::after {
@@ -942,28 +766,15 @@ body {
   width: 90px;
   height: 2px;
   background-color: #fff;
-  -webkit-animation-name: more-view-bt;
-          animation-name: more-view-bt;
+  transition: all 0.5s;
+}
+.more-view-bt:hover::after {
+  -webkit-animation-name: roadbar;
+          animation-name: roadbar;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-}
-@-webkit-keyframes more-view-bt {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 90px;
-  }
-}
-@keyframes more-view-bt {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 90px;
-  }
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
 }
 
 .project-itembox-1 {
@@ -1214,4 +1025,132 @@ body {
   transition: all 0.5s;
 }
 
-/*===  /// footer ===*//*# sourceMappingURL=main.css.map */
+/*===  /// footer ===*/
+.fade {
+  -webkit-animation-name: fade;
+          animation-name: fade;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.fadeup-1 {
+  -webkit-animation-name: fadeup-1;
+          animation-name: fadeup-1;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes fadeup-1 {
+  0% {
+    opacity: 0;
+    top: 150px;
+  }
+  100% {
+    opacity: 1;
+    top: 0px;
+  }
+}
+
+@keyframes fadeup-1 {
+  0% {
+    opacity: 0;
+    top: 150px;
+  }
+  100% {
+    opacity: 1;
+    top: 0px;
+  }
+}
+.fadeup-2 {
+  -webkit-animation-name: fadeup-2;
+          animation-name: fadeup-2;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes fadeup-2 {
+  0% {
+    opacity: 0;
+    top: 300px;
+  }
+  100% {
+    opacity: 1;
+    top: 0px;
+  }
+}
+
+@keyframes fadeup-2 {
+  0% {
+    opacity: 0;
+    top: 300px;
+  }
+  100% {
+    opacity: 1;
+    top: 0px;
+  }
+}
+.radius-effect {
+  -webkit-animation-name: radius-effect;
+          animation-name: radius-effect;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes radius-effect {
+  0% {
+    border-radius: 200px;
+  }
+  100% {
+    border-radius: 0;
+  }
+}
+
+@keyframes radius-effect {
+  0% {
+    border-radius: 200px;
+  }
+  100% {
+    border-radius: 0;
+  }
+}
+@-webkit-keyframes roadbar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 90px;
+  }
+}
+@keyframes roadbar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 90px;
+  }
+}/*# sourceMappingURL=main.css.map */
