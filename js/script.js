@@ -35,9 +35,6 @@ window.onload = function () {
   let mainGnb = $('.main-gnb');
   let mainGnbH = mainGnb.height();
 
-  
-
-
   mainGnb.mouseenter(function() {
     header.css('height', mainGnbH);
   });
@@ -46,5 +43,12 @@ window.onload = function () {
   });
 
 
+
+  let sw_parasol = new Swiper('.sw-parasol', {
+    loop: true,
+    slidesPerView: 3,
+    spaceBetween: 0,
+    centeredSlides: true,
+  });
 
 };

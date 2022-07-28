@@ -322,7 +322,6 @@ body {
   display: block;
   width: 1600px;
   margin: 0 auto;
-  background-color: rgba(170, 21, 21, 0.1);
   color: #fff;
 
 
@@ -575,7 +574,6 @@ body {
 
 .air-main {
   height: 100%;
-  background-color: green;
 
   .pla-set-inner {
     margin-bottom: 230px;
@@ -607,7 +605,7 @@ body {
 
 .sta-main {
   height: 100%;
-  background-color: blue;
+
 
   .pla-set-inner {
     padding-right: 160px;
@@ -639,7 +637,7 @@ body {
 
 .orc-main {
   height: 100%;
-  background-color: brown;
+
 
   .pla-set-inner {
     justify-content: space-between;
@@ -695,7 +693,6 @@ body {
   display: block;
   width: 100%;
   height: 100%;
-  background-color: #c0cce4;
 
   h3 {
     font-family: 'Nanum Myeongjo', serif;
@@ -704,6 +701,38 @@ body {
     text-align: center;
   }
 }
+
+.sw-paraosl {
+  position: relative;
+  display: block;
+  width: calc(100% + 2400px);
+  margin-left: -600px;
+  height: 900px;
+
+  .swiper-slide {
+    text-align: center;
+  }
+  .parasol-slide {
+    position: relative;
+    display: block;
+    width: 1200px;
+    height: 900px;
+  }
+
+  .swiper-slide .parasol-slide {
+    display: block;
+    text-align: center;
+    transform: scale(0.8);
+    transition: all 0.5s 0.2s ease-in-out;
+  }
+  .swiper-slide-active .parasol-slide {
+    transform: scale(1);
+  }
+
+
+}
+
+
 
 /*=== ///Parasol set ===*/
 
@@ -803,7 +832,6 @@ body {
   display: block;
   width: 100%;
   height: 2410px;
-  background-color: rgb(117, 126, 123);
   padding: 240px 0;
 }
 
@@ -1048,7 +1076,6 @@ body {
   display: block;
   width: 1600px;
   color: #fff;
-  background-color: rgba(0, 0, 0, 0.7);
 
   .con-us-txtbox {
     position: relative;
