@@ -609,9 +609,41 @@ body {
   width: 10px;
   height: 20px;
 }
+.slidepart .sw-sol-nav .sw-sol-next::after {
+  display: none;
+}
 .slidepart .sw-sol-nav .sw-sol-prev {
   width: 10px;
   height: 20px;
+}
+.slidepart .sw-sol-nav .sw-sol-prev::after {
+  display: none;
+}
+
+.icon-left-open-big {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  font-size: 45px;
+  color: #fff;
+  transition: all 0.5s;
+}
+.icon-left-open-big:hover {
+  left: -15px;
+}
+
+.icon-right-open-big {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  font-size: 45px;
+  color: #fff;
+  transition: all 0.5s;
+}
+.icon-right-open-big:hover {
+  left: 15px;
 }
 
 .sol-img {
@@ -742,6 +774,7 @@ body {
   background: url("../images/shade.jpg") no-repeat center;
   background-size: cover;
   background-color: rgba(0, 0, 0, 0.1);
+  transition: all 1s;
 }
 .s-and-r .s-and-r-bg::before {
   content: "";
@@ -795,6 +828,7 @@ body {
   border: 1px solid #fff;
   padding: 15px 47px;
   margin-top: 100px;
+  transition: all 0.7s;
 }
 
 /*===  /// Shade & Roofniture ===*/
@@ -805,6 +839,7 @@ body {
   width: 100%;
   height: 2410px;
   padding: 240px 0;
+  background-color: #fff;
 }
 
 .project-bgtxt {
@@ -993,8 +1028,7 @@ body {
   display: block;
   width: 100%;
   height: 680px;
-  background: url("../images/contact.jpg") no-repeat center;
-  background-size: cover;
+  overflow: hidden;
 }
 .contact-us::before {
   content: "";
@@ -1005,6 +1039,15 @@ body {
   bottom: 0px;
   background: #1d2c4a;
   opacity: 0.5;
+  z-index: 1;
+}
+.contact-us .contact-bg {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url("../images/contact.jpg") no-repeat center;
+  background-size: cover;
 }
 
 .con-us-inner {
@@ -1015,6 +1058,7 @@ body {
   display: block;
   width: 1600px;
   color: #fff;
+  z-index: 2;
 }
 .con-us-inner .con-us-txtbox {
   position: relative;
@@ -1295,5 +1339,33 @@ body {
   }
   100% {
     width: 90px;
+  }
+}
+.scroll-zoomin {
+  -webkit-animation-name: zoomin;
+          animation-name: zoomin;
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes zoomin {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes zoomin {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
   }
 }/*# sourceMappingURL=main.css.map */

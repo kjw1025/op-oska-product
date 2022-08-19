@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+  AOS.init();
 
   // 위로가기 기능
   let goTop = $('.gotop');
@@ -22,10 +23,6 @@ $(document).ready(function () {
   });
 
 });
-
-
-
-
 
 
 window.onload = function () {
@@ -61,5 +58,41 @@ window.onload = function () {
 
 
   });
+
+  // s and r
+  let srBg = $('.s-and-r-bg');
+  let shade = $('.shade');
+  let airea = $('.airea');
+
+  shade.mouseenter(function () {
+    srBg.css('background', 'url("../images/shade.jpg") no-repeat center');
+    srBg.css('background-size', 'cover');
+  });
+
+  airea.mouseenter(function () {
+    srBg.css('background', 'url("../images/model-airea-1.jpg") no-repeat center');
+    srBg.css('background-size', 'cover');
+  });
+
+  // contact 배경 줌인
+  let contactBg = $('.contact-bg');
+
+  contactBg.each(function (index, el) {
+
+    new Waypoint({
+      element: el,
+      handler: function (direction) {
+        var element = $(this.element);
+        setTimeout(function () {
+          element.addClass('scroll-zoomin');
+        }, 0);
+        // this.destroy();
+      },
+      offset: '80%'
+    });
+
+  });
+
+
 
 };

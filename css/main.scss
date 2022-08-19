@@ -741,13 +741,50 @@ body {
     .sw-sol-next {
       width: 10px;
       height: 20px;
+
+      &::after {
+        display: none;
+      }
     }
     .sw-sol-prev {
       width: 10px;
       height: 20px;
+
+      &::after {
+        display: none;
+      }
     }
   }
 }
+
+.icon-left-open-big {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  font-size: 45px;
+  color: #fff;
+  transition: all 0.5s;
+
+  &:hover {
+    left: -15px;
+  }
+}
+.icon-right-open-big {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  font-size: 45px;
+  color: #fff;
+  transition: all 0.5s;
+
+  &:hover {
+    left: 15px;
+  }
+}
+
+
 
 
 .sol-img {
@@ -869,6 +906,7 @@ body {
 }
 
 
+
 /*=== ///Parasol set ===*/
 
 
@@ -890,6 +928,7 @@ body {
     background: url('../images/shade.jpg') no-repeat center;
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.1);
+    transition: all 1s;
 
     &::before {
       content: "";
@@ -924,7 +963,6 @@ body {
         height: 100%;
         color: #fff;
         text-align: center;
-        // transition: all 2s;
 
         &:hover span {
           border-color: #1D2C4A;
@@ -951,6 +989,8 @@ body {
           border: 1px solid #fff;
           padding: 15px 47px;
           margin-top: 100px;
+
+          transition: all 0.7s;
         }
       }
     }
@@ -968,6 +1008,7 @@ body {
   width: 100%;
   height: 2410px;
   padding: 240px 0;
+  background-color: #fff;
 }
 
 .project-bgtxt {
@@ -1187,8 +1228,7 @@ body {
   display: block;
   width: 100%;
   height: 680px;
-  background: url('../images/contact.jpg') no-repeat center;
-  background-size: cover;
+  overflow: hidden;
 
   &::before {
     content: "";
@@ -1199,6 +1239,16 @@ body {
     bottom: 0px;
     background: #1d2c4a;
     opacity: 0.5;
+    z-index: 1;
+  }
+
+  .contact-bg {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url('../images/contact.jpg') no-repeat center;
+    background-size: cover;
   }
 }
 
@@ -1211,6 +1261,7 @@ body {
   display: block;
   width: 1600px;
   color: #fff;
+  z-index: 2;
 
   .con-us-txtbox {
     position: relative;
@@ -1475,3 +1526,18 @@ body {
     width: 90px;
   }
 }
+
+.scroll-zoomin {
+  animation-name: zoomin;
+  animation-duration: 2.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes zoomin {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+};
