@@ -74,8 +74,17 @@ body {
   position: relative;
   display: block;
   width: 100%;
-  height: 940px;
-  background-color: rgb(180, 178, 178);
+  height: 100vh;
+}
+
+.main-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 .header {
@@ -86,7 +95,8 @@ body {
   height: 100px;
   z-index: 9999;
   overflow: hidden;
-  transition: height 0.5s ease;
+  transition: all 0.5s;
+  background-color: transparent;
 }
 .header .logo {
   position: absolute;
@@ -97,6 +107,7 @@ body {
   height: 45px;
   background: url("../images/logo.svg") no-repeat center;
   background-size: contain;
+  transition: all 0.5s;
 }
 .header .main-gnb {
   position: relative;
@@ -118,9 +129,6 @@ body {
   background-color: rgba(255, 255, 255, 0);
   z-index: -1;
 }
-.header .main-gnb:hover ::before {
-  background-color: rgb(255, 255, 255);
-}
 .header .main-gnb::after {
   content: "";
   position: absolute;
@@ -133,9 +141,6 @@ body {
   background-color: rgb(255, 255, 255);
   border-top: 1px solid #d5d5d5;
   z-index: -1;
-}
-.header .main-gnb:hover {
-  background-color: #fff;
 }
 .header .main-gnb:hover > li > a {
   color: #1f2c4b;
@@ -309,6 +314,7 @@ body {
   display: block;
   font-size: 22px;
   font-weight: 300;
+  opacity: 0;
 }
 .f-main-txtbox strong {
   position: relative;
@@ -317,6 +323,7 @@ body {
   font-size: 85px;
   font-weight: 700;
   margin-top: 25px;
+  opacity: 0;
 }
 .f-main-txtbox .palystop-bt {
   position: relative;
@@ -378,6 +385,16 @@ body {
   width: 1px;
   height: 0px;
   background-color: rgb(255, 255, 255);
+  -webkit-animation-name: st;
+          animation-name: st;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
 }
 
 /*=== /// first-page ===*/
@@ -398,6 +415,7 @@ body {
   margin-top: 193px;
   margin-left: 51px;
   opacity: 0.15;
+  z-index: -1;
 }
 .pergola-set ul {
   position: relative;
@@ -422,6 +440,7 @@ body {
   display: block;
   font-size: 18px;
   font-weight: 500;
+  opacity: 0;
 }
 .pergola-set .pla-set-inner strong {
   position: relative;
@@ -430,12 +449,21 @@ body {
   font-size: 62px;
   margin-top: 60px;
   font-weight: bold;
+  opacity: 0;
 }
 .pergola-set .pla-set-inner p {
   position: relative;
   display: block;
   font-size: 20px;
   margin: 40px 0 110px;
+  opacity: 0;
+}
+.pergola-set .pla-set-inner .plus a {
+  opacity: 0;
+}
+
+.pla-set-imgbox {
+  opacity: 0;
 }
 
 .pro-main {
@@ -561,6 +589,7 @@ body {
   font-weight: 400;
   text-align: center;
   margin-bottom: 40px;
+  opacity: 0;
 }
 
 .sol-bg {
@@ -576,6 +605,7 @@ body {
   width: 4290px;
   height: 900px;
   margin-left: -1185px;
+  opacity: 0;
 }
 .slidepart .sw-paraosl {
   position: relative;
@@ -764,11 +794,12 @@ body {
   display: block;
   width: 100%;
   height: 910px;
-  background-color: rgb(49, 0, 0);
 }
 .s-and-r .s-and-r-bg {
-  position: relative;
-  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
   width: 100%;
   height: 100%;
   background: url("../images/shade.jpg") no-repeat center;
@@ -786,16 +817,22 @@ body {
   bottom: 0px;
   background-color: rgb(37, 37, 83);
 }
-.s-and-r .s-and-r-bg li {
+.s-and-r ul {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.s-and-r ul li {
   position: relative;
   display: block;
   width: 50%;
   height: 100%;
 }
-.s-and-r .s-and-r-bg li:first-child {
+.s-and-r ul li:first-child {
   border-right: 1px solid rgba(255, 255, 255, 0.5);
 }
-.s-and-r .s-and-r-bg li a {
+.s-and-r ul li a {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -806,21 +843,21 @@ body {
   color: #fff;
   text-align: center;
 }
-.s-and-r .s-and-r-bg li a:hover span {
+.s-and-r ul li a:hover span {
   border-color: #1D2C4A;
   background-color: #1D2C4A;
 }
-.s-and-r .s-and-r-bg li a strong {
+.s-and-r ul li a strong {
   font-size: 63px;
   font-family: "Nanum Myeongjo", serif;
   font-weight: bold;
 }
-.s-and-r .s-and-r-bg li a p {
+.s-and-r ul li a p {
   font-size: 18px;
   line-height: 1.7;
   margin-top: 23px;
 }
-.s-and-r .s-and-r-bg li a span {
+.s-and-r ul li a span {
   position: relative;
   display: inline-block;
   font-size: 17px;
@@ -829,6 +866,30 @@ body {
   padding: 15px 47px;
   margin-top: 100px;
   transition: all 0.7s;
+}
+
+.srBg-r-active {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url("../images/model-airea-1.jpg") no-repeat center;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: all 1s;
+  opacity: 0;
+}
+.srBg-r-active::before {
+  content: "";
+  opacity: 0.4;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: rgb(37, 37, 83);
 }
 
 /*===  /// Shade & Roofniture ===*/
@@ -862,14 +923,20 @@ body {
   margin: 0 auto;
 }
 .project-inner h3 {
+  position: relative;
+  display: block;
   font-family: "Nanum Myeongjo", serif;
   font-size: 60px;
   font-weight: 400;
+  opacity: 0;
 }
 .project-inner p {
+  position: relative;
+  display: block;
   font-size: 18px;
   font-weight: 300;
   margin-top: 22px;
+  opacity: 0;
 }
 
 .project-imgpart {
@@ -892,6 +959,7 @@ body {
   display: block;
   box-shadow: 14px 40px 68px 18px rgba(25, 32, 66, 0.3);
   overflow: hidden;
+  opacity: 0;
 }
 .project-itembox:hover .project-txt {
   opacity: 1;
@@ -1065,14 +1133,20 @@ body {
   display: block;
 }
 .con-us-inner .con-us-txtbox h3 {
+  position: relative;
+  display: block;
   font-family: "Nanum Myeongjo", serif;
   font-size: 60px;
   font-weight: 400;
+  opacity: 0;
 }
 .con-us-inner .con-us-txtbox p {
+  position: relative;
+  display: block;
   font-size: 18px;
   font-weight: 300;
   margin-top: 22px;
+  opacity: 0;
 }
 .con-us-inner a {
   position: relative;
@@ -1081,6 +1155,7 @@ body {
   color: #fff;
   margin-top: 90px;
   padding-bottom: 7px;
+  opacity: 0;
 }
 .con-us-inner a::after {
   content: "";
@@ -1218,8 +1293,10 @@ body {
           animation-name: fade;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 @-webkit-keyframes fade {
@@ -1242,10 +1319,12 @@ body {
 .fadeup-1 {
   -webkit-animation-name: fadeup-1;
           animation-name: fadeup-1;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 @-webkit-keyframes fadeup-1 {
@@ -1274,8 +1353,10 @@ body {
           animation-name: fadeup-2;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 @-webkit-keyframes fadeup-2 {
@@ -1304,8 +1385,10 @@ body {
           animation-name: radius-effect;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 @-webkit-keyframes radius-effect {
@@ -1367,5 +1450,52 @@ body {
   }
   100% {
     transform: scale(1.1);
+  }
+}
+.st {
+  /* 애니메이션 */
+  -webkit-animation-name: st;
+          animation-name: st;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+}
+
+@-webkit-keyframes st {
+  0% {
+    top: 0px;
+    left: 0;
+  }
+  50% {
+    top: 0px;
+    left: 0;
+    height: 130px;
+  }
+  100% {
+    top: 130px;
+    left: 0;
+    height: 0px;
+  }
+}
+
+@keyframes st {
+  0% {
+    top: 0px;
+    left: 0;
+  }
+  50% {
+    top: 0px;
+    left: 0;
+    height: 130px;
+  }
+  100% {
+    top: 130px;
+    left: 0;
+    height: 0px;
   }
 }/*# sourceMappingURL=main.css.map */
