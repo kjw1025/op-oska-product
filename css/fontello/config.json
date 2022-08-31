@@ -17,6 +17,18 @@
       "css": "right-open-big",
       "code": 59394,
       "src": "entypo"
+    },
+    {
+      "uid": "b660aec4a0c2cdec04a3cd708e00fa07",
+      "css": "pause",
+      "code": 59392,
+      "src": "iconic"
+    },
+    {
+      "uid": "929ff290f0be577d2a2d587d5a53eec1",
+      "css": "play",
+      "code": 59395,
+      "src": "iconic"
     }
   ]
 }

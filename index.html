@@ -70,6 +70,11 @@
   <link rel="stylesheet" href="css/fontello/css/animation.css">
   <link rel="stylesheet" href="css/fontello/css/fontello.css">
 
+  <!-- 폰트어썸 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css"
+    integrity="sha512-gMjQeDaELJ0ryCI+FtItusU9MkAifCZcGq789FrzkiM49D8lbDhoaUaIX4ASU187wofMNlgBJ4ckbrXM9sE6Pg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <!-- AOS -->
   <link href="js/aos/aos.css" rel="stylesheet">
   <script src="js/aos/aos.js"></script>
@@ -92,12 +97,14 @@
 
 <body>
 
+  
+
   <div class="wrap">
     <!-- first page -->
     <section class="first-page">
 
       <div class="main-video">
-        <video autoplay muted loop playsinline src="./asset/new_main.mp4" controls>
+        <video autoplay muted loop playsinline src="./asset/new_main.mp4" controls id="homeVdo">
         </video>
       </div>
 
@@ -196,11 +203,23 @@
         </ul> 
       </div>
 
-      <div class="f-mtxtin">
+      <div class="f-mtxtin">  
         <div class="f-main-txtbox">
           <p>제품, 그 이상을 넘어 작품으로</p>
           <strong>More than just a product</strong>
-          <div class="palystop-bt"></div>
+          <div class="palystop-bt">
+
+            <div class="progress-box fade fade-5">
+              <button type="button" class="progress-btn">
+                <!-- <i class="xi-pause"></i> -->
+                <i class="icon-pause"></i>
+              </button>
+              <svg class="progress-circle" width="64" height="64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="32" cy="32" r="32" stroke="#fff" stroke-width="3"/>
+              </svg>
+            </div>
+
+          </div>
         </div>
       </div>
 

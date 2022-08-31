@@ -27,6 +27,13 @@ $(document).ready(function () {
 
 window.onload = function () {
 
+  //프로그레스
+	// var vdo = document.getElementById('homeVdo');
+	// vdo.addEventListener('loadedmetadata', function() {
+	// 	$('.progress-circle circle ').css('animation-duration','' + vdo.duration + 's');
+	// });
+
+
   //  메뉴기능
   let header = $('.header');
   let mainGnb = $('.main-gnb');
