@@ -407,8 +407,10 @@ body {
   display: block;
   width: 64px;
   height: 69px;
-  background-color: rgba(255, 0, 50, 0.5);
+  // background-color: rgba(255, 0, 50, 0.5);
   margin-top: 110px;
+
+  
 
   .progress-btn {
     background: none;
@@ -423,7 +425,26 @@ body {
     font-size: 20px;
     line-height: 1;
     margin-top: -2px;
+
+    cursor: pointer;
   }
+}
+
+
+.progress-circle circle {
+	stroke-dasharray: 201;
+	stroke-dashoffset: 201;
+	animation-name:dash;
+	animation-duration:10s;
+	animation-timing-function:linear;
+	animation-iteration-count:infinite;
+	transform: rotate(-90deg);
+    transform-origin: center center;
+}
+@keyframes dash {
+	to {
+		stroke-dashoffset: 0;
+	}
 }
 
 .kakao-bt {

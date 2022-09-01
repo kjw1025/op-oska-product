@@ -332,7 +332,6 @@ body {
   display: block;
   width: 64px;
   height: 69px;
-  background-color: rgba(255, 0, 50, 0.5);
   margin-top: 110px;
 }
 .palystop-bt .progress-btn {
@@ -347,8 +346,35 @@ body {
   font-size: 20px;
   line-height: 1;
   margin-top: -2px;
+  cursor: pointer;
 }
 
+.progress-circle circle {
+  stroke-dasharray: 201;
+  stroke-dashoffset: 201;
+  -webkit-animation-name: dash;
+          animation-name: dash;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  transform: rotate(-90deg);
+  transform-origin: center center;
+}
+
+@-webkit-keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
 .kakao-bt {
   position: absolute;
   bottom: 0;

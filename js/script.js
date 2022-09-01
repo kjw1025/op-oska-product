@@ -27,11 +27,54 @@ $(document).ready(function () {
 
 window.onload = function () {
 
-  //프로그레스
-	// var vdo = document.getElementById('homeVdo');
-	// vdo.addEventListener('loadedmetadata', function() {
-	// 	$('.progress-circle circle ').css('animation-duration','' + vdo.duration + 's');
-	// });
+   //프로그레스
+   // var vdo = document.getElementById('homeVdo');
+   // vdo.addEventListener('loadedmetadata', function() {
+   //    $('.progress-circle circle ').css('animation-duration','' + vdo.duration + 's');
+   // });
+
+  // 비디오 콘트롤
+  let progressBox = $('.progress-box');
+  let homeVdo = $('#homeVdo').get(0); 
+  let homeVdoState = 1; 
+  // console.log(homeVdo.duration);
+  let homeVdoTime = homeVdo.duration * 1000; // 비디오 시간
+
+  let progressCircle = $('.progress-circle circle');
+  progressCircle.css('animation-duration', '24.1s');
+  progressCircle.css('animation-play-state' ,'running');
+
+  let progressBtn_icon = $('.progress-btn > i');
+  // progressBtn_icon.addClass('icon-pause');
+
+  // 비디오 실행하기
+  homeVdo.currentTime = 0;
+  homeVdo.play();
+  progressBox.click(function(){
+    if(homeVdoState == 1) {
+
+      homeVdo.pause();
+      progressCircle.css('animation-play-state' ,'paused');
+      progressBtn_icon.addClass('icon-play');
+      progressBtn_icon.removeClass('icon-pause');
+      
+      homeVdoState = 0;
+
+    }else{
+
+      homeVdo.play();
+      progressCircle.css('animation-play-state' ,'running');
+      progressBtn_icon.addClass('icon-pause');
+      progressBtn_icon.removeClass('icon-play');
+      
+      homeVdoState = 1;
+
+    }
+    
+  });
+
+
+  //  메뉴기능
 
 
   //  메뉴기능
@@ -43,12 +86,12 @@ window.onload = function () {
   mainGnb.mouseenter(function () {
     header.css('height', mainGnbH);
     header.css('background-color', 'white');
-    logo.css('background', 'url("../images/logo-gray.svg") no-repeat center');
+    logo.css('background', 'url("images/logo-gray.svg") no-repeat center');
   });
   mainGnb.mouseleave(function () {
     header.css('height', 100);
     header.css('background-color', 'transparent');
-    logo.css('background', 'url("../images/logo.svg") no-repeat center');
+    logo.css('background', 'url("images/logo.svg") no-repeat center');
   });
 
 
