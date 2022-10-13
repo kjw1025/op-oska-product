@@ -1,676 +1,771 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
 
-<head>
-  <meta charset="UTF-8">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/favicon_package/favicon.ico" />
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="images/apple-touch-icon.png"
+    />
 
-  <!-- favicon -->
-  <link rel="shortcut icon" href="images/favicon_package/favicon.ico" />
-  <link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon.png">
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="images/favicon_package/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon_package/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon_package/favicon-16x16.png"
+    />
+    <link rel="manifest" href="images/favicon_package/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="images/favicon_package/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
 
-  <link rel="apple-touch-icon" sizes="120x120" href="images/favicon_package/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_package/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_package/favicon-16x16.png">
-  <link rel="manifest" href="images/favicon_package/site.webmanifest">
-  <link rel="mask-icon" href="images/favicon_package/safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
+    <!-- seo -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://oska.co.kr/" />
+    <meta property="og:site_name" content="OSKA Product" />
+    <meta
+      property="og:description"
+      content="오스카프로덕트, 오스카, OSKA, 신개념 차양시설, 파고라, 파라솔, 정원, 인테리어"
+    />
+    <meta
+      property="og:keywords"
+      content="오스카프로덕트, 오스카, OSKA, 신개념 차양시설, 파고라, 파라솔, 정원, 인테리어"
+    />
+    <meta property="og:title" content="오스카 프로덕트, 오스카, OSKA" />
+    <meta
+      name="description"
+      content="오스카프로덕트, 오스카, OSKA, 신개념 차양시설, 파고라, 파라솔, 정원, 인테리어"
+    />
+    <meta
+      name="keywords"
+      content="오스카프로덕트, 오스카, OSKA, 신개념 차양시설, 파고라, 파라솔, 정원, 인테리어"
+    />
+    <meta
+      name="naver-site-verification"
+      content="507b5e92de9c5fdcdfd4a58bc9d7d9595012370d"
+    />
+    <meta
+      name="google-site-verification"
+      content="swoejoaIhLuFxNnoa5zNj5eNkRzgkjsdFshvgiTOmCk"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "name": "OSKA Product",
+        "url": "https://oska.co.kr",
+        "sameAs": [
+          "https://blog.naver.com/oska_office",
+          "https://www.youtube.com/channel/UCnHc91VIARTNrMQiK0IMKFQ",
+          "https://www.instagram.com/oskaproduct",
+          "https://tv.naver.com/oskaproduct"
+        ]
+      }
+    </script>
+    <meta
+      property="og:image"
+      content="/_File/siteMng//ogImageFile_1641367923_0.jpg"
+    />
 
-  <!-- seo -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://oska.co.kr/">
-  <meta property="og:site_name" content="OSKA Product">
-  <meta property="og:description" content="오스카프로덕트, 오스카, OSKA, 신개념 차양시설, 파고라, 파라솔, 정원, 인테리어">
-  <meta property="og:keywords" content="오스카프로덕트, 오스카, OSKA, 신개념 차양시설, 파고라, 파라솔, 정원, 인테리어">
-  <meta property="og:title" content="오스카 프로덕트, 오스카, OSKA">
-  <meta name="description" content="오스카프로덕트, 오스카, OSKA, 신개념 차양시설, 파고라, 파라솔, 정원, 인테리어">
-  <meta name="keywords" content="오스카프로덕트, 오스카, OSKA, 신개념 차양시설, 파고라, 파라솔, 정원, 인테리어">
-  <meta name="naver-site-verification" content="507b5e92de9c5fdcdfd4a58bc9d7d9595012370d" />
-  <meta name="google-site-verification" content="swoejoaIhLuFxNnoa5zNj5eNkRzgkjsdFshvgiTOmCk" />
-  <script type="application/ld+json">
-    {
-      "@context": "http://schema.org",
-      "@type": "Person",
-      "name": "OSKA Product",
-      "url": "https://oska.co.kr",
-      "sameAs": ["https://blog.naver.com/oska_office", "https://www.youtube.com/channel/UCnHc91VIARTNrMQiK0IMKFQ",
-        "https://www.instagram.com/oskaproduct", "https://tv.naver.com/oskaproduct"
-      ]
-    }
-  </script>
-  <meta property="og:image" content="/_File/siteMng//ogImageFile_1641367923_0.jpg" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>오스카</title>
 
+    <!-- jquery -->
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
 
-
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-  <title>오스카</title>
-
-  <!-- jquery -->
-  <script src="https://code.jquery.com/jquery-2.2.4.min.js"
-    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-
-  <!-- 자바 라이브러리 -->
-  <script src="js/prefixfree.min.js"></script>
-  <script src="js/respond.min.js"></script>
-  <!--[if lt IE 9]> 
+    <!-- 자바 라이브러리 -->
+    <script src="js/prefixfree.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <!--[if lt IE 9]>
       <script src="js/html5shiv.js"></script>
-  <![endif]-->
+    <![endif]-->
 
-  <!-- reset css -->
-  <link rel="stylesheet" href="css/reset.css">
+    <!-- reset css -->
+    <link rel="stylesheet" href="css/reset.css" />
 
-  <!-- swiper  CDN-->
-  <link rel="stylesheet" href="js/swiper/swiper.min.css">
-  <script src="js/swiper/swiper.min.js"></script>
+    <!-- swiper  CDN-->
+    <link rel="stylesheet" href="js/swiper/swiper.min.css" />
+    <script src="js/swiper/swiper.min.js"></script>
 
+    <!-- 딩벳폰트 참조 -->
+    <link rel="stylesheet" href="css/fontello/css/animation.css" />
+    <link rel="stylesheet" href="css/fontello/css/fontello.css" />
 
-  <!-- 딩벳폰트 참조 -->
-  <link rel="stylesheet" href="css/fontello/css/animation.css">
-  <link rel="stylesheet" href="css/fontello/css/fontello.css">
+    <!-- 폰트어썸 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css"
+      integrity="sha512-gMjQeDaELJ0ryCI+FtItusU9MkAifCZcGq789FrzkiM49D8lbDhoaUaIX4ASU187wofMNlgBJ4ckbrXM9sE6Pg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-  <!-- 폰트어썸 -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css"
-    integrity="sha512-gMjQeDaELJ0ryCI+FtItusU9MkAifCZcGq789FrzkiM49D8lbDhoaUaIX4ASU187wofMNlgBJ4ckbrXM9sE6Pg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- AOS -->
+    <link href="js/aos/aos.css" rel="stylesheet" />
+    <script src="js/aos/aos.js"></script>
 
-  <!-- AOS -->
-  <link href="js/aos/aos.css" rel="stylesheet">
-  <script src="js/aos/aos.js"></script>
+    <!-- Waypoint -->
+    <script src="js/jquery.waypoints.js"></script>
 
-  <!-- Waypoint -->
-  <script src="js/jquery.waypoints.js"></script>
+    <!-- 사용자 지정 -->
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/main.css" />
 
-  <!-- 사용자 지정 -->
-  <script src="js/script.js"></script>
-  <link rel="stylesheet" href="css/main.css">
+    <!-- font awesome CDN-->
+    <!-- <script src="https://kit.fontawesome.com/7fd1bd0328.js" crossorigin="anonymous"></script> -->
 
-  <!-- font awesome CDN-->
-  <!-- <script src="https://kit.fontawesome.com/7fd1bd0328.js" crossorigin="anonymous"></script> -->
+    <!-- 구글 Material 아이콘 -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+  </head>
 
-  <!-- 구글 Material 아이콘 -->
-  <link
-    href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
-    rel="stylesheet">
-</head>
-
-<body>
-
-  
-
-  <div class="wrap">
-    <!-- first page -->
-    <section class="first-page">
-
-      <div class="main-video">
-        <video autoplay muted loop playsinline src="./asset/new_main.mp4" controls id="homeVdo">
-        </video>
+  <body>
+    <div class="wrap">
+      <!-- modal popup -->
+      <div class="modal-wrap">
+        <div class="modal-main">
+          <!-- top -->
+          <div class="modal-top">
+            <h2 class="modal-title">오스카 프로덕트 클론코딩</h2>
+            <ul>
+              <li>
+                이 사이트는 <span>📚 스터디용</span>으로 제작되었으며 리소스는
+                <span>원작자</span>에게 있습니다.
+              </li>
+              <li>
+                해당 사이트 관련 문제사항 또는 문의사항이 있다면, <br />
+                <span class="modal-email">art.1025p@gmail.com</span> 으로 연락해
+                주세요 :)
+              </li>
+            </ul>
+          </div>
+          <!-- middle -->
+          <div class="modal-middle">
+            <h3 class="modal-subTitle">수정 및 개선사항</h3>
+            <ul>
+              <li>
+                1. UX 편의성을 향상시키기 위해 주메뉴 및 서브메뉴에 마우스
+                롤오버시 포커스 유지 기능을 추가하였습니다.
+              </li>
+              <li>2. 적용사항 ( 다음 내용을 적용하였습니다 :)</li>
+            </ul>
+          </div>
+          <!-- bottom -->
+          <div class="modal-bottom">
+            <p>본 사이트는 <span>Chrome</span>에 최적화되어 있습니다.</p>
+            <button class="modal-close">Close</button>
+          </div>
+        </div>
       </div>
+      <!-- // modal popup -->
 
-      <header class="header">
-        <a href="#" class="logo"></a>
+      <!-- first page -->
+      <section class="first-page">
+        <div class="main-video">
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            src="./asset/new_main.mp4"
+            controls
+            id="homeVdo"
+          ></video>
+        </div>
 
+        <header class="header">
+          <a href="#" class="logo"></a>
 
-        <ul class="main-gnb">
+          <ul class="main-gnb">
+            <li>
+              <a href="#">Company</a>
+              <ul class="subgnb">
+                <li>
+                  <a href="#"><span>About</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>브랜드 포인트</span></a>
+                </li>
+              </ul>
+            </li>
 
-          <li>
-            <a href="#">Company</a>
-            <ul class="subgnb">
-              <li><a href="#"><span>About</span></a></li>
-              <li><a href="#"><span>브랜드 포인트</span></a></li>
-            </ul>
+            <li>
+              <a href="#">Models</a>
+              <ul class="subgnb">
+                <li>
+                  <a href="#"><span>파고라</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>파라솔</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>쉐이드</span></a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#">Projects</a>
+              <ul class="subgnb">
+                <li>
+                  <a href="#"><span>국내</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>해외</span></a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#">Contact</a>
+              <ul class="subgnb">
+                <li>
+                  <a href="#"><span>공지사함</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>견적상담</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>제휴 및 지원문의</span></a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <a href="#" class="application-bt">
+            견적<br />
+            신청
+          </a>
+        </header>
+
+        <div class="f-r-menu">
+          <ul class="r-menuin">
+            <li>
+              <a href="#">
+                <div class="r-main-txt">
+                  <strong>AIREA</strong>
+                  <p>전동 오스카 파고라</p>
+                </div>
+                <span>more view</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <div class="r-main-txt">
+                  <strong>STAY</strong>
+                  <p>BASIC 오스카 파고라</p>
+                </div>
+                <span>more view</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <div class="r-main-txt">
+                  <strong>PARASOL</strong>
+                  <p>이탈리아 프리미엄 파라솔</p>
+                </div>
+                <span>more view</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <div class="r-main-txt">
+                  <strong>AIREA SOLAR</strong>
+                  <p>에어리어 솔라</p>
+                </div>
+                <span>more view</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="f-mtxtin">
+          <div class="f-main-txtbox">
+            <p>제품, 그 이상을 넘어 작품으로</p>
+            <strong>More than just a product</strong>
+            <div class="palystop-bt">
+              <div class="progress-box">
+                <button type="button" class="progress-btn">
+                  <!-- <i class="xi-pause"></i> -->
+                  <i class="icon-pause"></i>
+                </button>
+                <svg
+                  class="progress-circle"
+                  width="64"
+                  height="64"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="32"
+                    cy="32"
+                    r="32"
+                    stroke="#fff"
+                    stroke-width="3"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a href="#" class="kakao-bt"></a>
+        <div class="scroll-stick">
+          <span>scroll</span>
+          <div class="w-bar"></div>
+        </div>
+      </section>
+      <!-- ///first page -->
+
+      <!-- Pergola set -->
+      <section class="pergola-set">
+        <img
+          src="./images/pergola-bg.png"
+          alt="파고라 bg"
+          class="pergola-set-bg"
+        />
+        <ul>
+          <li class="pro-main">
+            <div class="pla-set-inner">
+              <div class="pla-set-imgbox pro-imgbox">
+                <a href="#"></a>
+              </div>
+              <div class="pla-set-txtbox pro-txtbox">
+                <span>PERGOLA</span>
+                <strong>Product</strong>
+                <p>
+                  블레이드 개폐조절로 통풍과 차양이 뛰어나며 <br />
+                  알루미늄 소재의 특성상 반영구적 사용이 가능한 모델입니다.
+                </p>
+                <div class="plus">
+                  <a href="#" class="click-bt"></a>
+                </div>
+              </div>
+            </div>
           </li>
 
-          <li>
-            <a href="#">Models</a>
-            <ul class="subgnb">
-              <li><a href="#"><span>파고라</span></a></li>
-              <li><a href="#"><span>파라솔</span></a></li>
-              <li><a href="#"><span>쉐이드</span></a></li>
-            </ul>
+          <li class="air-main">
+            <div class="pla-set-inner">
+              <div class="pla-set-txtbox air-txtbox">
+                <span>PERGOLA</span>
+                <strong>Airea</strong>
+                <p>
+                  에어리어는 전동식 시스템 파고라로, <br />
+                  LED등 옵션과 글라스 도어가 추가 가능한 모델입니다.
+                </p>
+                <div class="plus">
+                  <a href="#" class="click-bt"></a>
+                </div>
+              </div>
+              <div class="pla-set-imgbox air-imgbox">
+                <a href="#"></a>
+              </div>
+            </div>
           </li>
 
-          <li>
-            <a href="#">Projects</a>
-            <ul class="subgnb">
-              <li><a href="#"><span>국내</span></a></li>
-              <li><a href="#"><span>해외</span></a></li>
-            </ul>
+          <li class="sta-main">
+            <div class="pla-set-inner">
+              <div class="pla-set-imgbox sta-imgbox">
+                <a href="#"></a>
+              </div>
+              <div class="pla-set-txtbox sta-txtbox">
+                <span>PERGOLA</span>
+                <strong>Stay</strong>
+                <p>
+                  스테이는 경량형 시스템 파고라로, <br />
+                  독일산 수동기어를 사용한 모델입니다.
+                </p>
+                <div class="plus">
+                  <a href="#" class="click-bt"></a>
+                </div>
+              </div>
+            </div>
           </li>
 
-          <li>
-            <a href="#">Contact</a>
-            <ul class="subgnb">
-              <li><a href="#"><span>공지사함</span></a></li>
-              <li><a href="#"><span>견적상담</span></a></li>
-              <li><a href="#"><span>제휴 및 지원문의</span></a></li>
-            </ul>
+          <li class="orc-main">
+            <div class="pla-set-inner">
+              <div class="pla-set-txtbox orc-txtbox">
+                <span>PERGOLA</span>
+                <strong>Opera</strong>
+                <p>
+                  영감이 샘솟는 특별한 공간을 선사하는 <br />
+                  오스카의 프리미엄 파고라 입니다.
+                </p>
+                <div class="plus">
+                  <a href="#" class="click-bt"></a>
+                </div>
+              </div>
+              <div class="pla-set-imgbox orc-imgbox">
+                <a href="#"></a>
+              </div>
+            </div>
           </li>
-
         </ul>
+      </section>
+      <!-- ///Pergola set -->
 
+      <!-- Parasol set -->
+      <section class="parasol-set">
+        <img
+          src="./images/parasol-bg.png"
+          alt="파라솥 백그라운드"
+          class="sol-bg"
+        />
+        <h3>Parasol</h3>
+        <div class="slidepart">
+          <div class="swiper-container sw-parasol">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="parasol-slide">
+                  <div class="sol-img sol-img1">
+                    <div class="parasol-txt">
+                      <div class="plus">
+                        <a href="#" class="click-bt"></a>
+                      </div>
+                      <b>PARASOL</b>
+                      <h4>Vela</h4>
+                      <p>
+                        파라솔과 돛의 조화로운 융합과 물질적 강도와 형태의
+                        가벼움 사이에서 시너지 효과가 형성되어 야외 환경을
+                        향상시키는 독특한 아이템입니다.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-        <a href="#" class="application-bt">
-          견적<br>
-          신청
+              <div class="swiper-slide">
+                <div class="parasol-slide">
+                  <div class="sol-img sol-img2">
+                    <div class="parasol-txt">
+                      <div class="plus">
+                        <a href="#" class="click-bt"></a>
+                      </div>
+                      <b>PARASOL</b>
+                      <h4>Marina</h4>
+                      <p>
+                        작고 견고하며 편리한 사용을 할 수 있는 제품의 요구를
+                        충족하기 위해 개발되었습니다. 여러 위치와 환경에 배치 할
+                        수 있으며, 수영장, 발코니 및 테라스 등에서 사용하기에
+                        적합합니다.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="parasol-slide">
+                  <div class="sol-img sol-img3">
+                    <div class="parasol-txt">
+                      <div class="plus">
+                        <a href="#" class="click-bt"></a>
+                      </div>
+                      <b>PARASOL</b>
+                      <h4>Napoli</h4>
+                      <p>
+                        Napoli Standard(나폴리 스탠다드)는 중앙 기둥이 짙은
+                        회색으로 에폭시 코팅된 견고하고 편리한 파라솔입니다.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="parasol-slide">
+                  <div class="sol-img sol-img4">
+                    <div class="parasol-txt">
+                      <div class="plus">
+                        <a href="#" class="click-bt"></a>
+                      </div>
+                      <b>PARASOL</b>
+                      <h4>Rimini</h4>
+                      <p>
+                        Rimini Standard(리미니 스탠다드)는 중앙 기둥이 흰색으로
+                        에폭시 코팅된 견고하고 편리한 파라솔입니다. 특히
+                        튼튼함과 모든 환경에서의 사용 가능한 호환성으로 수 년
+                        동안 높이 평가 되었습니다.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="parasol-slide">
+                  <div class="sol-img sol-img5">
+                    <div class="parasol-txt">
+                      <div class="plus">
+                        <a href="#" class="click-bt"></a>
+                      </div>
+                      <b>PARASOL</b>
+                      <h4>Palladio</h4>
+                      <p>
+                        Palladio Standard(팔라디오 스탠다드)는 30년 이상
+                        판매되어온 역사적인 모델입니다. 모든 환경에서의 사용
+                        가능한 호환성으로 수 년 동안 최고의 베스트셀러가 되었고,
+                        다양한 사이즈가 있는 대표적인 파라솔입니다.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="parasol-slide">
+                  <div class="sol-img sol-img6">
+                    <div class="parasol-txt">
+                      <div class="plus">
+                        <a href="#" class="click-bt"></a>
+                      </div>
+                      <b>PARASOL</b>
+                      <h4>Galileo</h4>
+                      <p>
+                        매력적이고 현대적인 디자인이 돋보이는 갈릴레오는 가구를
+                        옮기지 않고도 파라솔을 쉽게 닫을 수 있도록 지지대에 개방
+                        시스템을 갖췄습니다. 다양한 사이즈가 있는 대표적인
+                        파라솔입니다.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="parasol-slide">
+                  <div class="sol-img sol-img7">
+                    <div class="parasol-txt">
+                      <div class="plus">
+                        <a href="#" class="click-bt"></a>
+                      </div>
+                      <b>PARASOL</b>
+                      <h4>Astro</h4>
+                      <p>
+                        Astro(아스트로)는 현대적이고 미니멀리즘적인 환경에
+                        적합한 미래형 제품입니다. Scolaro는 기술, 인체 공학,
+                        설계, 혁신과 같은 시너지 조합을 통해 야외에서 미래
+                        지향적인 생활 방식을 만들었습니다.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="parasol-slide">
+                  <div class="sol-img sol-img8">
+                    <div class="parasol-txt">
+                      <div class="plus">
+                        <a href="#" class="click-bt"></a>
+                      </div>
+                      <b>PARASOL</b>
+                      <h4>Revo</h4>
+                      <p>
+                        유니크한 디자인으로 이목을 사로잡는 Revo(레보)는 디자인
+                        특허를 보유하고있는 제품으로 이태리 최고의 파라솔 회사
+                        Scolaro(스콜라로)의 베스트셀러 중 하나입니다.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="parasol-slide">
+                  <div class="sol-img sol-img9">
+                    <div class="parasol-txt">
+                      <div class="plus">
+                        <a href="#" class="click-bt"></a>
+                      </div>
+                      <b>PARASOL</b>
+                      <h4>Galaxia</h4>
+                      <p>
+                        Galaxia(갤럭시아)는 단일 파라솔 아스트로가 연결된
+                        제품들이 포함되어 있으며, 현대적이고 미니멀리즘적인
+                        환경에 적합한 미래형 제품입니다.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="sw-sol-nav">
+              <div class="swiper-button-next sw-sol-next">
+                <i class="icon-right-open-big"></i>
+              </div>
+              <div class="swiper-button-prev sw-sol-prev">
+                <i class="icon-left-open-big"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ///Parasol set -->
+
+      <!-- Shade & Roofniture -->
+      <section class="s-and-r">
+        <div class="s-and-r-bg"></div>
+        <div class="srBg-r-active"></div>
+        <ul>
+          <li class="shade">
+            <a href="#">
+              <strong>Shade</strong>
+              <p>
+                이태리 Sun-Sail 디자이너가 제작한 디펜스는 <br />
+                유니크하고 아름다운 디자인과 내구성을 지니고 있습니다.
+              </p>
+              <span>자세히보기</span>
+            </a>
+          </li>
+
+          <li class="airea">
+            <a href="#">
+              <strong>AIREA SOLAR</strong>
+              <p>
+                전동형 파고라의 틀에 태양광 블레이드와 패널을 더한 <br />
+                효율적인 시스템 파고라 Solar 에디션 입니다.
+              </p>
+              <span>자세히보기</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <!-- ///Shade & Roofniture -->
+
+      <!-- Project -->
+      <section class="project">
+        <div class="project-bgtxt">
+          Design <br />
+          Your <br />
+          Outdoor <br />
+          Life
+        </div>
+        <div class="project-inner">
+          <h3>Project</h3>
+          <p>오스카의 프로젝트를 만나보세요.</p>
+          <div class="project-imgpart">
+            <div class="project-imgbox">
+              <div class="project-itembox project-itembox-1">
+                <a href="#" class="project-img1"></a>
+                <div class="project-txt project-txt-1">
+                  <h5>PERGOLA</h5>
+                  <strong>AIREA EXTRA</strong>
+                  <p>강원</p>
+                  <span class="more-view-bt">more view</span>
+                </div>
+              </div>
+
+              <div class="project-itembox project-itembox-3">
+                <a href="#" class="project-img3"></a>
+                <div class="project-txt project-txt-3">
+                  <h5>PERGOLA</h5>
+                  <strong>OPERA EXTRA</strong>
+                  <p>강원</p>
+                  <span class="more-view-bt">more view</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-imgbox">
+              <div class="project-itembox project-itembox-2">
+                <a href="#" class="project-img2"></a>
+                <div class="project-txt project-txt-2">
+                  <h5>PERGOLA</h5>
+                  <strong>AIREA</strong>
+                  <p>경기</p>
+                  <span class="more-view-bt">more view</span>
+                </div>
+              </div>
+
+              <div class="project-itembox project-itembox-4">
+                <a href="#" class="project-img4"></a>
+                <div class="project-txt project-txt-4">
+                  <h5>PERGOLA</h5>
+                  <strong>STAY</strong>
+                  <p>경기</p>
+                  <span class="more-view-bt">more view</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ///Project -->
+
+      <!-- Contact us -->
+      <section class="contact-us">
+        <div class="contact-bg"></div>
+        <div class="con-us-inner">
+          <div class="con-us-txtbox">
+            <h3>Contact us</h3>
+            <p>새로운 공간에서 펼쳐지는 이야기의 시작</p>
+          </div>
+          <a href="#" class="more-view-bt">more view</a>
+        </div>
+      </section>
+      <!-- ///Contact us -->
+
+      <!-- footer -->
+      <footer class="footer">
+        <div class="sns-link">
+          <a href="#" class="blog"></a>
+          <a href="#" class="facebook"></a>
+          <a href="#" class="youtube"></a>
+          <a href="#" class="instargram"></a>
+        </div>
+        <div class="footer-inner">
+          <strong>COMPANY</strong>
+          <b>1800-5945</b>
+          <p>
+            [본사] 경기도 평택시 청북읍 드림산단2로 104 <br />
+            <span>E</span> office@oska.co.kr
+          </p>
+          <p>
+            [부산직영점] 부산광역시 수영구 광안해변로 326번길 32, 109호 <br />
+            <span>T</span> 070-8691-1399 &nbsp&nbsp&nbsp&nbsp<span>E</span>
+            oska_busan@oska.co.kr
+          </p>
+          <a href="#"></a>
+          <h6><span>CEO</span> 이한울 &nbsp&nbsp © OSKA Product</h6>
+        </div>
+
+        <a href="#" class="gotop">
+          <span class="material-icons-outlined"> straight </span>
         </a>
-      </header>
-
-      <div class="f-r-menu">
-        <ul class="r-menuin">
-
-          <li>
-            <a href="#">
-              <div class="r-main-txt">
-                <strong>AIREA</strong>
-                <p>전동 오스카 파고라</p>
-              </div>
-              <span>more view</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="#">
-              <div class="r-main-txt">
-                <strong>STAY</strong>
-                <p>BASIC 오스카 파고라</p>
-              </div>
-              <span>more view</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="#">
-              <div class="r-main-txt">
-                <strong>PARASOL</strong>
-                <p>이탈리아 프리미엄 파라솔</p>
-              </div>
-              <span>more view</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="#">
-              <div class="r-main-txt">
-                <strong>AIREA SOLAR</strong>
-                <p>에어리어 솔라</p>
-              </div>
-              <span>more view</span>
-            </a>
-          </li>
-
-        </ul> 
-      </div>
-
-      <div class="f-mtxtin">  
-        <div class="f-main-txtbox">
-          <p>제품, 그 이상을 넘어 작품으로</p>
-          <strong>More than just a product</strong>
-          <div class="palystop-bt">
-
-            <div class="progress-box">
-              <button type="button" class="progress-btn">
-                <!-- <i class="xi-pause"></i> -->
-                <i class="icon-pause"></i>
-              </button>
-              <svg class="progress-circle" width="64" height="64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="32" cy="32" r="32" stroke="#fff" stroke-width="3"/>
-              </svg>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-
-      <a href="#" class="kakao-bt"></a>
-      <div class="scroll-stick">
-        <span>scroll</span>
-        <div class="w-bar"></div>
-      </div>
-
-      
-
-    </section>
-    <!-- ///first page -->
-
-
-    <!-- Pergola set -->
-    <section class="pergola-set">
-      <img src="./images/pergola-bg.png" alt="파고라 bg" class="pergola-set-bg">
-      <ul>
-
-        <li class="pro-main">
-          <div class="pla-set-inner">
-            <div class="pla-set-imgbox pro-imgbox">
-              <a href="#"></a>
-            </div>
-            <div class="pla-set-txtbox pro-txtbox">
-              <span>PERGOLA</span>
-              <strong>Product</strong>
-              <p>
-                블레이드 개폐조절로 통풍과 차양이 뛰어나며 <br>
-                알루미늄 소재의 특성상 반영구적 사용이 가능한 모델입니다.
-              </p>
-              <div class="plus">
-                <a href="#" class="click-bt"></a>
-              </div>
-            </div>
-          </div>
-        </li>
-
-        <li class="air-main">
-          <div class="pla-set-inner">
-            <div class="pla-set-txtbox air-txtbox">
-              <span>PERGOLA</span>
-              <strong>Airea</strong>
-              <p>
-                에어리어는 전동식 시스템 파고라로, <br>
-                LED등 옵션과 글라스 도어가 추가 가능한 모델입니다.
-              </p>
-              <div class="plus">
-                <a href="#" class="click-bt"></a>
-              </div>
-            </div>
-            <div class="pla-set-imgbox air-imgbox">
-              <a href="#"></a>
-            </div>
-          </div>
-        </li>
-
-        <li class="sta-main">
-          <div class="pla-set-inner">
-            <div class="pla-set-imgbox sta-imgbox">
-              <a href="#"></a>
-            </div>
-            <div class="pla-set-txtbox sta-txtbox">
-              <span>PERGOLA</span>
-              <strong>Stay</strong>
-              <p>
-                스테이는 경량형 시스템 파고라로, <br>
-                독일산 수동기어를 사용한 모델입니다.
-              </p>
-              <div class="plus">
-                <a href="#" class="click-bt"></a>
-              </div>
-            </div>
-          </div>
-        </li>
-
-        <li class="orc-main">
-          <div class="pla-set-inner">
-            <div class="pla-set-txtbox orc-txtbox">
-              <span>PERGOLA</span>
-              <strong>Opera</strong>
-              <p>
-                영감이 샘솟는 특별한 공간을 선사하는 <br>
-                오스카의 프리미엄 파고라 입니다.
-              </p>
-              <div class="plus">
-                <a href="#" class="click-bt"></a>
-              </div>
-            </div>
-            <div class="pla-set-imgbox orc-imgbox">
-              <a href="#"></a>
-            </div>
-          </div>
-        </li>
-
-      </ul>
-    </section>
-    <!-- ///Pergola set -->
-
-
-    <!-- Parasol set -->
-    <section class="parasol-set">
-      <img src="./images/parasol-bg.png" alt="파라솥 백그라운드" class="sol-bg">
-      <h3>Parasol</h3>
-      <div class="slidepart">
-
-        <div class="swiper-container sw-parasol">
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="parasol-slide">
-                <div class="sol-img sol-img1">
-                  <div class="parasol-txt">
-                    <div class="plus">
-                      <a href="#" class="click-bt"></a>
-                    </div>
-                    <b>PARASOL</b>
-                    <h4>Vela</h4>
-                    <p>
-                      파라솔과 돛의 조화로운 융합과 물질적 강도와 형태의 가벼움 사이에서 시너지 효과가 형성되어
-                      야외 환경을 향상시키는 독특한 아이템입니다.
-                    </p>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="parasol-slide">
-                <div class="sol-img sol-img2">
-                  <div class="parasol-txt">
-                    <div class="plus">
-                      <a href="#" class="click-bt"></a>
-                    </div>
-                    <b>PARASOL</b>
-                    <h4>Marina</h4>
-                    <p>
-                      작고 견고하며 편리한 사용을 할 수 있는 제품의 요구를 충족하기 위해 개발되었습니다.
-                      여러 위치와 환경에 배치 할 수 있으며, 수영장, 발코니 및 테라스 등에서 사용하기에 적합합니다.
-                    </p>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="parasol-slide">
-                <div class="sol-img sol-img3">
-                  <div class="parasol-txt">
-                    <div class="plus">
-                      <a href="#" class="click-bt"></a>
-                    </div>
-                    <b>PARASOL</b>
-                    <h4>Napoli</h4>
-                    <p>
-                      Napoli Standard(나폴리 스탠다드)는 중앙 기둥이 짙은 회색으로 에폭시 코팅된 견고하고 편리한 파라솔입니다.
-                    </p>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="parasol-slide">
-                <div class="sol-img sol-img4">
-                  <div class="parasol-txt">
-                    <div class="plus">
-                      <a href="#" class="click-bt"></a>
-                    </div>
-                    <b>PARASOL</b>
-                    <h4>Rimini</h4>
-                    <p>
-                      Rimini Standard(리미니 스탠다드)는 중앙 기둥이 흰색으로 에폭시 코팅된 견고하고 편리한 파라솔입니다. 특히 튼튼함과 모든 환경에서의 사용 가능한 호환성으로 수 년
-                      동안
-                      높이 평가 되었습니다.
-                    </p>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="parasol-slide">
-                <div class="sol-img sol-img5">
-                  <div class="parasol-txt">
-                    <div class="plus">
-                      <a href="#" class="click-bt"></a>
-                    </div>
-                    <b>PARASOL</b>
-                    <h4>Palladio</h4>
-                    <p>
-                      Palladio Standard(팔라디오 스탠다드)는 30년 이상 판매되어온 역사적인 모델입니다. 모든 환경에서의 사용 가능한 호환성으로 수 년 동안 최고의 베스트셀러가
-                      되었고,
-                      다양한 사이즈가 있는 대표적인 파라솔입니다.
-                    </p>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="parasol-slide">
-                <div class="sol-img sol-img6">
-                  <div class="parasol-txt">
-                    <div class="plus">
-                      <a href="#" class="click-bt"></a>
-                    </div>
-                    <b>PARASOL</b>
-                    <h4>Galileo</h4>
-                    <p>
-                      매력적이고 현대적인 디자인이 돋보이는 갈릴레오는 가구를 옮기지 않고도 파라솔을 쉽게 닫을 수 있도록 지지대에 개방 시스템을 갖췄습니다. 다양한 사이즈가 있는 대표적인
-                      파라솔입니다.
-                    </p>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="parasol-slide">
-                <div class="sol-img sol-img7">
-                  <div class="parasol-txt">
-                    <div class="plus">
-                      <a href="#" class="click-bt"></a>
-                    </div>
-                    <b>PARASOL</b>
-                    <h4>Astro</h4>
-                    <p>
-                      Astro(아스트로)는 현대적이고 미니멀리즘적인 환경에 적합한 미래형 제품입니다. Scolaro는 기술, 인체 공학, 설계, 혁신과 같은 시너지 조합을 통해 야외에서 미래
-                      지향적인
-                      생활 방식을 만들었습니다.
-                    </p>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="parasol-slide">
-                <div class="sol-img sol-img8">
-                  <div class="parasol-txt">
-                    <div class="plus">
-                      <a href="#" class="click-bt"></a>
-                    </div>
-                    <b>PARASOL</b>
-                    <h4>Revo</h4>
-                    <p>
-                      유니크한 디자인으로 이목을 사로잡는 Revo(레보)는 디자인 특허를 보유하고있는 제품으로
-                      이태리 최고의 파라솔 회사 Scolaro(스콜라로)의 베스트셀러 중 하나입니다.
-                    </p>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="parasol-slide">
-                <div class="sol-img sol-img9">
-                  <div class="parasol-txt">
-                    <div class="plus">
-                      <a href="#" class="click-bt"></a>
-                    </div>
-                    <b>PARASOL</b>
-                    <h4>Galaxia</h4>
-                    <p>
-                      Galaxia(갤럭시아)는 단일 파라솔 아스트로가 연결된 제품들이 포함되어 있으며, 현대적이고 미니멀리즘적인 환경에 적합한 미래형 제품입니다.
-                    </p>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-
-
-
-          </div>
-
-          <div class="sw-sol-nav">
-            <div class="swiper-button-next sw-sol-next">
-              <i class="icon-right-open-big"></i>
-            </div>
-            <div class="swiper-button-prev sw-sol-prev">
-              <i class="icon-left-open-big"></i>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-    <!-- ///Parasol set -->
-
-
-    <!-- Shade & Roofniture -->
-    <section class="s-and-r">
-      <div class="s-and-r-bg"></div>
-      <div class="srBg-r-active"></div>
-      <ul>
-
-
-        <li class="shade">
-          <a href="#">
-            <strong>Shade</strong>
-            <p>
-              이태리 Sun-Sail 디자이너가 제작한 디펜스는 <br>
-              유니크하고 아름다운 디자인과 내구성을 지니고 있습니다.
-            </p>
-            <span>자세히보기</span>
-          </a>
-        </li>
-
-        <li class="airea">
-          <a href="#">
-            <strong>AIREA SOLAR</strong>
-            <p>
-              전동형 파고라의 틀에 태양광 블레이드와 패널을 더한 <br>
-              효율적인 시스템 파고라 Solar 에디션 입니다.
-            </p>
-            <span>자세히보기</span>
-          </a>
-        </li>
-
-      </ul>
-    </section>
-    <!-- ///Shade & Roofniture -->
-
-
-    <!-- Project -->
-    <section class="project">
-      <div class="project-bgtxt">
-        Design <br>
-        Your <br>
-        Outdoor <br>
-        Life
-      </div>
-      <div class="project-inner">
-        <h3>Project</h3>
-        <p>오스카의 프로젝트를 만나보세요.</p>
-        <div class="project-imgpart">
-
-          <div class="project-imgbox">
-
-            <div class="project-itembox project-itembox-1">
-              <a href="#" class="project-img1"></a>
-              <div class="project-txt project-txt-1">
-                <h5>PERGOLA</h5>
-                <strong>AIREA EXTRA</strong>
-                <p>강원</p>
-                <span class="more-view-bt">more view</span>
-              </div>
-            </div>
-
-            <div class="project-itembox project-itembox-3">
-              <a href="#" class="project-img3"></a>
-              <div class="project-txt project-txt-3">
-                <h5>PERGOLA</h5>
-                <strong>OPERA EXTRA</strong>
-                <p>강원</p>
-                <span class="more-view-bt">more view</span>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="project-imgbox">
-
-            <div class="project-itembox project-itembox-2">
-              <a href="#" class="project-img2"></a>
-              <div class="project-txt project-txt-2">
-                <h5>PERGOLA</h5>
-                <strong>AIREA</strong>
-                <p>경기</p>
-                <span class="more-view-bt">more view</span>
-              </div>
-            </div>
-
-            <div class="project-itembox project-itembox-4">
-              <a href="#" class="project-img4"></a>
-              <div class="project-txt project-txt-4">
-                <h5>PERGOLA</h5>
-                <strong>STAY</strong>
-                <p>경기</p>
-                <span class="more-view-bt">more view</span>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-      </div>
-    </section>
-    <!-- ///Project -->
-
-
-    <!-- Contact us -->
-    <section class="contact-us">
-      <div class="contact-bg"></div>
-      <div class="con-us-inner">
-        <div class="con-us-txtbox">
-          <h3>Contact us</h3>
-          <p>새로운 공간에서 펼쳐지는 이야기의 시작</p>
-        </div>
-        <a href="#" class="more-view-bt">more view</a>
-      </div>
-    </section>
-    <!-- ///Contact us -->
-
-
-    <!-- footer -->
-    <footer class="footer">
-      <div class="sns-link">
-        <a href="#" class="blog"></a>
-        <a href="#" class="facebook"></a>
-        <a href="#" class="youtube"></a>
-        <a href="#" class="instargram"></a>
-      </div>
-      <div class="footer-inner">
-        <strong>COMPANY</strong>
-        <b>1800-5945</b>
-        <p>
-          [본사] 경기도 평택시 청북읍 드림산단2로 104 <br>
-          <span>E</span> office@oska.co.kr
-        </p>
-        <p>
-          [부산직영점] 부산광역시 수영구 광안해변로 326번길 32, 109호 <br>
-          <span>T</span> 070-8691-1399 &nbsp&nbsp&nbsp&nbsp<span>E</span> oska_busan@oska.co.kr
-        </p>
-        <a href="#"></a>
-        <h6><span>CEO</span> 이한울 &nbsp&nbsp © OSKA Product</h6>
-      </div>
-
-      <a href="#" class="gotop">
-        <span class="material-icons-outlined">
-          straight
-        </span>
-      </a>
-    </footer>
-    <!-- ///footer -->
-
-
-  </div>
-</body>
-
+      </footer>
+      <!-- ///footer -->
+    </div>
+  </body>
 </html>
