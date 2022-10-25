@@ -38,12 +38,6 @@ $(document).ready(function () {
 });
 
 window.onload = function () {
-  //프로그레스
-  // var vdo = document.getElementById('homeVdo');
-  // vdo.addEventListener('loadedmetadata', function() {
-  //    $('.progress-circle circle ').css('animation-duration','' + vdo.duration + 's');
-  // });
-
   // 비디오 콘트롤
   let progressBox = $(".progress-box");
   let homeVdo = $("#homeVdo").get(0);
